@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { FaArrowRight, FaArrowLeft} from 'react-icons/fa';
 
 
 import './blogPost.css'
@@ -11,7 +12,7 @@ const Template = ({ data, pageContext }) => {
 	const { next, prev } = pageContext;
 
 	return (
-		<div id="post">
+		<div className="air">
 			<h1 id="title">{title}</h1>
 			<div>
 				<h2 id="date">{date}</h2>
@@ -22,10 +23,7 @@ const Template = ({ data, pageContext }) => {
 				<p>
 					{prev && (
 						<Link to={prev.frontmatter.path}>
-							{prev.frontmatter.title}{' '}
-							<span role="img" aria-label="point-left">
-								👈{' '}
-							</span>
+							<FaArrowLeft/>
 							Previous
 						</Link>
 					)}
@@ -33,11 +31,8 @@ const Template = ({ data, pageContext }) => {
 				<p>
 					{next && (
 						<Link to={next.frontmatter.path}>
-							Next{' '}
-							<span role="img" aria-label="point-right">
-								👉
-							</span>
-							{next.frontmatter.title}
+							Next
+							<FaArrowRight/>
 						</Link>
 					)}
 				</p>

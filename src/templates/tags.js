@@ -10,7 +10,7 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
   return (
-    <div>
+    <div className="air">
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
