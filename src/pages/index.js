@@ -10,10 +10,11 @@ const IndexPage = ({ data }) => {
 		<Layout>
 			<div>
 				<ul>
-					<li><a href="#">Architecture</a></li>
-					<li><a href="#">Technology</a></li>
-					<li><a href="#">Tools</a></li>
-					<li><a href="#">UX</a></li>
+					<li><Link to="/tags/architecture">Architecture</Link></li>
+					<li><Link to="/tags/technology">Technology</Link></li>
+					<li><Link to="/tags/tools">Tools</Link></li>
+					<li><Link to="/tags/ux">UX</Link></li>
+					
 				</ul>
 			</div>
 			<div>
