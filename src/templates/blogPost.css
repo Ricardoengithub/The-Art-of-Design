@@ -8,3 +8,11 @@
 #title, #date{
     text-align: center;
 }
+#navigation{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 10%;
+    justify-content: space-between;
+}

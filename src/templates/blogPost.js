@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+
+
 import './blogPost.css'
 
 const Template = ({ data, pageContext }) => {
@@ -16,28 +18,30 @@ const Template = ({ data, pageContext }) => {
 			</div>
 			<br />
 			<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-			<p>
-				{prev && (
-					<Link to={prev.frontmatter.path}>
-						{prev.frontmatter.title}{' '}
-						<span role="img" aria-label="point-left">
-							👈{' '}
-						</span>
-						Previous
-					</Link>
-				)}
-			</p>
-			<p>
-				{next && (
-					<Link to={next.frontmatter.path}>
-						Next{' '}
-						<span role="img" aria-label="point-right">
-							👉
-						</span>
-						{next.frontmatter.title}
-					</Link>
-				)}
-			</p>
+			<div id="navigation">
+				<p>
+					{prev && (
+						<Link to={prev.frontmatter.path}>
+							{prev.frontmatter.title}{' '}
+							<span role="img" aria-label="point-left">
+								👈{' '}
+							</span>
+							Previous
+						</Link>
+					)}
+				</p>
+				<p>
+					{next && (
+						<Link to={next.frontmatter.path}>
+							Next{' '}
+							<span role="img" aria-label="point-right">
+								👉
+							</span>
+							{next.frontmatter.title}
+						</Link>
+					)}
+				</p>
+			</div>
 		</div>
 	);
 };
