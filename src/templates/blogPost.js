@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import './blogPost.css'
 
 const Template = ({ data, pageContext }) => {
 	const title = data.markdownRemark.frontmatter.title;
@@ -8,10 +9,10 @@ const Template = ({ data, pageContext }) => {
 	const { next, prev } = pageContext;
 
 	return (
-		<div>
-			<h1>{title}</h1>
+		<div id="post">
+			<h1 id="title">{title}</h1>
 			<div>
-				<em>{date}</em>
+				<h2 id="date">{date}</h2>
 			</div>
 			<br />
 			<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />

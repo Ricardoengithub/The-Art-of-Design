@@ -3,6 +3,7 @@ module.exports = {
     title: `The Art of Design`,
     description: `Hello world!`,
     author: `@Ricardoentuiter`,
+    siteUrl: 'https://www.theartofdesign.studio'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,6 +14,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
