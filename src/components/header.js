@@ -11,11 +11,6 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
       id="head"
     >
       <h3 style={{ margin: 0 }}>
@@ -30,7 +25,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h3>
 
-      <h5>
+      <h3 style={{ margin: 0 }}>
         <Link 
         to="/tags"
         style={{
@@ -40,11 +35,11 @@ const Header = ({ siteTitle }) => (
         >
           Topics
         </Link>
-      </h5>
+      </h3>
     </div>
     <div id="navbar">
 				<ul>
-          <li><Link to="/">Editorial</Link></li>
+          <li><Link to="/">Home</Link></li>
 					<li><Link to="/tags/architecture">Architecture</Link></li>
 					<li><Link to="/tags/technology">Technology</Link></li>
 					<li><Link to="/tags/tools"> Tools</Link></li>

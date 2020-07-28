@@ -1,27 +1,45 @@
+@font-face {
+    font-family: Lato;
+    src: url(Lato-Light.ttf);
+    font-display: auto;
+    font-display: swap;
+  }
+  
 #head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
 }
 #navbar {
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid whitesmoke;
 }
 #navbar ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
 }
 #navbar ul li{
     list-style-type: none;
+    border-right: 2px solid black;
+    text-align: center;
+    width: 20%;
+    padding: 5px;
+}
+#navbar ul li:last-child{
+    border-right: none;
 }
 #navbar ul li a{
     color: rgb(136, 136, 136);
     text-decoration: none;
+    font-family: 'Lato';
 }
 #navbar ul li a:hover{
     color: black;
-    text-decoration: line-through;
+    text-decoration: underline;
+    font-weight: bold;
     
 }
