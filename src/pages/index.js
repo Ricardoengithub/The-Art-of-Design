@@ -9,15 +9,6 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<div>
-				<ul>
-					<li><Link to="/tags/architecture">#Architecture</Link></li>
-					<li><Link to="/tags/technology">#Technology</Link></li>
-					<li><Link to="/tags/tools"> #Tools</Link></li>
-					<li><Link to="/tags/ux">#UX</Link></li>
-					
-				</ul>
-			</div>
-			<div>
 				{edges.map(edge => {
 					const { frontmatter } = edge.node;
 					return (

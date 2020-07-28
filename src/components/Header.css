@@ -1,0 +1,27 @@
+#head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#navbar {
+    border-bottom: 1px solid black;
+}
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 10%;
+}
+#navbar ul li{
+    list-style-type: none;
+}
+#navbar ul li a{
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    text-decoration: line-through;
+    
+}
