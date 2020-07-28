@@ -9,6 +9,14 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<div>
+				<ul>
+					<li><a href="#">Architecture</a></li>
+					<li><a href="#">Technology</a></li>
+					<li><a href="#">Tools</a></li>
+					<li><a href="#">UX</a></li>
+				</ul>
+			</div>
+			<div>
 				{edges.map(edge => {
 					const { frontmatter } = edge.node;
 					return (
