@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { FaHome, FaTags, FaArrowUp, FaPlus, FaMinus } from 'react-icons/fa';
+import { FaHome, FaTags, FaArrowUp, FaBars, FaTimes } from 'react-icons/fa';
 import './Options.css';
 
 class Options extends React.Component{
@@ -26,8 +26,8 @@ class Options extends React.Component{
         return(
 			<div id="options">
                 {this.state.contador % 2 === 0 
-                ?<FaPlus id="button-plus" onClick={e => this.handleClick(e)}/>
-                :<FaMinus id="button-minus" onClick={e => this.handleClick(e)}/>}
+                ?<FaBars id="button-plus" onClick={e => this.handleClick(e)}/>
+                :<FaTimes id="button-minus" onClick={e => this.handleClick(e)}/>}
 				
                 <Link to="#title" id="button-up" className={this.state.display}><FaArrowUp/></Link>
 				<Link to="/" id="button-home" className={this.state.display}><FaHome/></Link>
