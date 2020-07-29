@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { FaArrowRight, FaArrowLeft, FaHome, FaTags, FaArrowUp } from 'react-icons/fa';
-
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import Options from './Options';
 
 import './blogPost.css'
 
@@ -13,10 +13,6 @@ const Template = ({ data, pageContext }) => {
 
 	return (
 		<div>
-			<div id="nav">
-				<Link to="/"><FaHome/> Home</Link>
-				<Link to="/tags"><FaTags/> Tags</Link>
-			</div>
 			<div className="air">
 				<h1 id="title">{title}</h1>
 				<div>
@@ -42,11 +38,12 @@ const Template = ({ data, pageContext }) => {
 						)}
 					</p>
 				</div>
+				<Options />
 			</div>
-			<Link to="#title"><FaArrowUp id="button-up"/></Link>
 		</div>
 	);
 };
+
 
 export const postQuery = graphql`
 	query($pathSlug: String!) {
