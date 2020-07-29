@@ -17,7 +17,7 @@ const TagsPage = ({
   },
 }) => (
   <div className="air">
-    <Helmet title={title} />
+    <Helmet title={"Tags | The Art of Design"} />
     <div>
       <h1>Tags</h1>
       <ul>

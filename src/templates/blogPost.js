@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { Helmet } from "react-helmet"
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import Options from './Options';
 
@@ -13,6 +14,7 @@ const Template = ({ data, pageContext }) => {
 
 	return (
 		<div>
+			<Helmet title={title + " | The Art of Design"} />
 			<div className="air">
 				<h1 id="title">{title}</h1>
 				<div>

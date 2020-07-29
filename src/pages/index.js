@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { Helmet } from "react-helmet"
 
 import Layout from '../components/layout';
 
@@ -8,6 +9,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
+			<Helmet title={"Home | The Art of Design"} />
 			<div>
 				{edges.map(edge => {
 					const { frontmatter } = edge.node;

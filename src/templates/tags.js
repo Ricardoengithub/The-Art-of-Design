@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 // Components
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from "gatsby";
+import { Helmet } from "react-helmet"
+
 const Tags = ({ pageContext, data }) => {
     console.log(data)
   const { tag } = pageContext
@@ -11,6 +13,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
   return (
     <div className="air">
+      <Helmet title={tag + " / The Art of Design"} />
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
