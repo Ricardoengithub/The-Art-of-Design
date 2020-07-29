@@ -17,20 +17,18 @@
     color: black;
 }
 #button-home,#button-tags,#button-up{
-    background-color: black;
     padding: 5px;
-    border-radius: 50%;
+    color: black;
     position: fixed;
     font-size: 1.35rem;
-    color: white;
 }
 #button-home{
     bottom: 30px;
     right: 70px;
 }
 #button-tags{
-    bottom: 75px;
-    right: 53px;
+    bottom: 80px;
+    right: 50px;
 }
 #button-up{
     bottom: 100px;
@@ -41,73 +39,4 @@
 }
 .active{
     display: block;
-    animation: leftin ease 1s;
-}
-
-
-
-@keyframes leftin {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes leftin {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes leftin {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@-o-keyframes leftin {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes leftin {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes leftin {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
 }
