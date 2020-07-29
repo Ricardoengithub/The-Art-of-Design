@@ -7,16 +7,16 @@
     padding: 10px;
 }
 #button-plus{
-    background-color: lime;
+    background-color: #6699CC;
     color: white;
 }  
 #button-minus{
-    background-color: red;
+    background-color: maroon;
     color: white;
 }
 #button-home,#button-tags,#button-up{
     padding: 5px;
-    color: black;
+    color: rgb(66, 57, 57);
     position: fixed;
     font-size: 2rem;
 }

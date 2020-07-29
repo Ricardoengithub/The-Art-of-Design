@@ -3,6 +3,8 @@ import { graphql, Link } from 'gatsby';
 import { Helmet } from "react-helmet"
 
 import Layout from '../components/layout';
+import Hashtags from './Hashtags'
+import './Index.css';
 
 const IndexPage = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
@@ -10,7 +12,9 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<Helmet title={"Home | The Art of Design"} />
-			<div>
+			<Hashtags />
+			<div id="posts">
+				<h3>También puedes revisar los últimos artículos:</h3>
 				{edges.map(edge => {
 					const { frontmatter } = edge.node;
 					return (

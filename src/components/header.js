@@ -5,10 +5,6 @@ import './Header.css'
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `white`,
-      marginBottom: `1.45rem`,
-    }}
   >
     <div
       id="head"
@@ -21,7 +17,8 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          {/* {siteTitle} */}
+          TAD
         </Link>
       </h3>
 
@@ -37,16 +34,6 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h3>
     </div>
-    <div id="navbar">
-				<ul>
-          <li><Link to="/">Home</Link></li>
-					<li><Link to="/tags/architecture">Architecture</Link></li>
-					<li><Link to="/tags/technology">Technology</Link></li>
-					<li><Link to="/tags/tools"> Tools</Link></li>
-					<li><Link to="/tags/ux">UX</Link></li>
-					
-				</ul>
-			</div>
   </header>
 )
 

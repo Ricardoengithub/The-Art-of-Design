@@ -23,22 +23,19 @@ const Template = ({ data, pageContext }) => {
 				<br />
 				<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
 				<div id="navigation">
-					<p>
 						{prev && (
 							<Link to={prev.frontmatter.path}>
 								<FaArrowLeft/>
 								Previous
 							</Link>
 						)}
-					</p>
-					<p>
+
 						{next && (
 							<Link to={next.frontmatter.path}>
 								Next
 								<FaArrowRight/>
 							</Link>
 						)}
-					</p>
 				</div>
 				<Options />
 			</div>
