@@ -18,12 +18,12 @@ const Template = ({ data, pageContext }) => {
 			<Helmet title={title + " | The Art of Design"} />
 			<div className="air">
 				<h1 id="title">{title}</h1>
+				<div>
+					<em id="date">{date}</em>
 				<Img
 					fluid={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
 					alt="A corgi smiling happily"
 				/>
-				<div>
-					<em id="date">{date}</em>
 				</div>
 				<br />
 				<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />

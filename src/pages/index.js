@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from "react-helmet"
+import Img from "gatsby-image"
 
 import Layout from '../components/layout';
 import Hashtags from './Hashtags'
@@ -18,6 +19,8 @@ const IndexPage = ({ data }) => {
 				<h4>También puedes revisar los últimos artículos:</h4>
 				{edges.map((edge, index) => {
 					const { frontmatter } = edge.node;
+					console.log(frontmatter.title)
+					console.log(frontmatter.srcPath)
 					return (
 						<div  key={index}>
 						<Link to={frontmatter.path}                 
@@ -26,6 +29,10 @@ const IndexPage = ({ data }) => {
 
 			
 												<h5 className="post-title">{frontmatter.title}</h5>
+												<Img
+													fluid={frontmatter.srcPath.childImageSharp.fluid}
+													alt="A corgi smiling happily"
+												/>
 												<em className="post-date">{frontmatter.date}</em>                            
 												<br/>
 												<div className="post-tag">
@@ -59,11 +66,19 @@ export const query = graphql`
 						path
 						tags
 						excerpt
+						srcPath{
+							childImageSharp {
+								fluid {
+								  ...GatsbyImageSharpFluid
+								}
+							  }
+						}
 					}
 				}
 			}
 		}
 	}
 `;
+
 
 export default IndexPage;
