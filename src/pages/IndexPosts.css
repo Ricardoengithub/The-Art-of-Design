@@ -5,22 +5,6 @@
 #posts h4{
     text-align: center;
 }
-/* #posts a{
-    text-decoration: none;
-}
-#posts a h3{
-    font-family: 'Lato';
-}
-#posts a div{
-    margin: 60px 0;
-    padding: 5px 20px;
-    text-align: center;
-    border-radius: 20px;
-    color: black;
-}
-#posts a div:hover{
-    background-color: whitesmoke;
-} */
 
 .post{
     padding: 20px 20px 40px 20px;
@@ -28,7 +12,7 @@
     width: 80%;
     text-align: center;
     border-radius: 10px;
-    color: black;
+    color: rgb(61, 61, 61);
 }
 .post:hover{
     background-color: rgb(249, 249, 249);
@@ -38,6 +22,7 @@
 }
 .post-title{
     text-decoration: none;
+    color: black;
 }
 .post-tag{
     margin: 10px 0;

@@ -24,8 +24,7 @@ import './IndexPosts.css';
 
 
 const ListPosts = (props) => {
-	let colors = ["#E0B0FF", "#E6E6FA", "#F7D6D0"]
-	const listPosts = props.props.props.map((node, index) =>	
+ 	const listPosts = props.props.props.map((node, index) =>	
     <div>
 
         <Link to={node.node.frontmatter.path}                 
