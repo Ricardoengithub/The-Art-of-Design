@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from "react-helmet"
+import Img from "gatsby-image"
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import Options from './Options';
 
@@ -17,6 +18,10 @@ const Template = ({ data, pageContext }) => {
 			<Helmet title={title + " | The Art of Design"} />
 			<div className="air">
 				<h1 id="title">{title}</h1>
+				<Img
+					fluid={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
+					alt="A corgi smiling happily"
+				/>
 				<div>
 					<em id="date">{date}</em>
 				</div>
@@ -54,6 +59,13 @@ export const postQuery = graphql`
 				path
 				tags
 				excerpt
+				srcPath{
+					childImageSharp {
+						fluid {
+						  ...GatsbyImageSharpFluid
+						}
+					  }
+				}
 			}
 		}
 	}
