@@ -27,6 +27,7 @@ hr:first-child{
     text-decoration: none;
 }
 .post-date{
+    min-width: 175px;
     margin: 15px auto;
     width: 40%;
     color: white;
