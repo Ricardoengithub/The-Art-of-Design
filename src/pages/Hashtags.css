@@ -1,34 +1,3 @@
-/* #navbar {
-    border-bottom: 3px solid whitesmoke;
-}
-#navbar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
-}
-#navbar ul li{
-    list-style-type: none;
-    border-right: 2px solid rgb(155, 155, 155);
-    text-align: center;
-    width: 20%;
-    padding: 5px;
-}
-#navbar ul li:last-child{
-    border-right: none;
-}
-#navbar ul li a{
-    color: rgb(95, 95, 95);
-    text-decoration: none;
-    font-family: 'Lato';
-}
-#navbar ul li a:hover{
-    color: black;
-    text-decoration: underline;
-    font-weight: bold;
-    
-} */
 #hashtags {
     text-align: center;
     margin-top: 100px;

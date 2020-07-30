@@ -22,7 +22,12 @@
 }
 .post-title{
     text-decoration: none;
-    color: black;
+    color: white;
+    padding: 10px 0;
+    margin: 5px 0 10px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(61, 61, 61);
 }
 .post-tag{
     margin: 10px 0;

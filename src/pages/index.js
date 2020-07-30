@@ -23,16 +23,16 @@ const IndexPage = ({ data }) => {
 						<Link to={frontmatter.path}                 
 							className="post-link">
 								<div className="post">
-										<div>
+
 			
-												<h3 className="post-title">{frontmatter.title}</h3>
+												<h5 className="post-title">{frontmatter.title}</h5>
 												<em className="post-date">{frontmatter.date}</em>                            
 												<br/>
 												<div className="post-tag">
 													{frontmatter.tags.map((tag) => "#" + tag + " ")}
 												</div>
 												
-										</div>
+
 								</div>
 						</Link>
 						<hr/>
