@@ -1,10 +1,11 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Helmet } from "react-helmet"
 
 import Layout from '../components/layout';
 import Hashtags from './Hashtags'
-import './Index.css';
+import IndexPosts from './IndexPosts';
+
 
 const IndexPage = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
@@ -13,24 +14,7 @@ const IndexPage = ({ data }) => {
 		<Layout>
 			<Helmet title={"Home | The Art of Design"} />
 			<Hashtags />
-			<div id="posts">
-				<h3>También puedes revisar los últimos artículos:</h3>
-				{edges.map(edge => {
-					const { frontmatter } = edge.node;
-					return (
-						<div key={frontmatter.path}>
-							<Link to={frontmatter.path}>{frontmatter.title}</Link>
-							&nbsp;
-							<small>
-								{' '}
-								<em>published on</em> {frontmatter.date}
-							</small>
-							<p>{frontmatter.excerpt}</p>
-							<br />
-						</div>
-					);
-				})}
-			</div>
+			<IndexPosts props={edges}/>
 		</Layout>
 	);
 };
