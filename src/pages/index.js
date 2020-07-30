@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
 			<Helmet title={"Home | The Art of Design"} />
 			<Hashtags />
 			<div id="posts">
-				<h3>También puedes revisar los últimos artículos:</h3>
+				<h4>También puedes revisar los últimos artículos:</h4>
 				{edges.map((edge, index) => {
 					const { frontmatter } = edge.node;
 					return (
