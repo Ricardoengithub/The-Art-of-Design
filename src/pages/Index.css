@@ -5,30 +5,57 @@
 #posts h4{
     text-align: center;
 }
-
+hr{
+    height:2px;border-width:0;color:gray;background-color:gray
+}
+hr:first-child{
+    display: none;
+}
 .post{
     padding: 10px 20px 20px 20px;
-    margin: 20px auto;
-    width: 90%;
+    margin: 30px auto;
+    width: 80%;
     text-align: center;
     border-radius: 10px;
     color: rgb(61, 61, 61);
 }
 .post:hover{
-    background-color: rgb(249, 249, 249);
+    background-color: whitesmoke;
+
 }
 .post-link{
     text-decoration: none;
 }
+.post-date{
+    margin: 15px auto;
+    width: 40%;
+    color: white;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: rgb(61, 61, 61);
+}
 .post-title{
     text-decoration: none;
     color: white;
-    padding: 10px 0;
-    margin: 5px 0 10px;
+    padding: 15px 0;
+    margin: 5px 0 15px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgb(61, 61, 61);
 }
+.post-description{
+    margin: 20px 0 25px 0;
+    justify-content: space-between;
+}
 .post-tag{
-    margin: 10px 0;
+    background-color: #E6E6FA;
+    margin: 10px auto;
+    padding: 5px 0;
+    width: 70%;
+    border-radius: 10px;
+}
+.post-image{
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
 }

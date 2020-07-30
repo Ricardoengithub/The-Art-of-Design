@@ -26,23 +26,23 @@ const IndexPage = ({ data }) => {
 						<Link to={frontmatter.path}                 
 							className="post-link">
 								<div className="post">
-
-			
-												<h5 className="post-title">{frontmatter.title}</h5>
-												<Img
+												<h5 className="post-date">
+													{frontmatter.date}
+												</h5>
+												<Img className="post-image"
 													fluid={frontmatter.srcPath.childImageSharp.fluid}
 													alt="A corgi smiling happily"
 												/>
-												<em className="post-date">{frontmatter.date}</em>                            
-												<br/>
+												<h5 className="post-title">{frontmatter.title}</h5>
+												<p className="post-description">Muse are an English rock band from Teignmouth, Devon, formed in 1994. The band consists of Matt Bellamy (lead vocals, guitar, keyboards), Chris Wolstenholme (bass guitar, backing vocals), and Dominic Howard (drums). </p>                     								
 												<div className="post-tag">
 													{frontmatter.tags.map((tag) => "#" + tag + " ")}
 												</div>
 												
 
 								</div>
-						</Link>
-						<hr/>
+						</Link>		
+						<hr/>				
 					</div>
 					);
 				})}
