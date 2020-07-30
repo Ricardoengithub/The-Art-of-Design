@@ -14,7 +14,7 @@ hr:first-child{
 .post{
     padding: 10px 20px 20px 20px;
     margin: 30px auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
     border-radius: 10px;
     color: rgb(61, 61, 61);
@@ -30,7 +30,7 @@ hr:first-child{
     margin: 15px auto;
     width: 40%;
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
     border-radius: 10px;
     background-color: rgb(61, 61, 61);
 }
@@ -38,8 +38,8 @@ hr:first-child{
     text-decoration: none;
     color: white;
     padding: 15px 0;
-    margin: 5px 0 15px;
-    width: 100%;
+    margin: 5px auto 15px;
+    width: 80%;
     border-radius: 10px;
     background-color: rgb(61, 61, 61);
 }
