@@ -22,7 +22,7 @@ hr:first-child{
     margin: 30px auto;
     width: 100%;
     min-width: 300px;
-    max-width: 400px;
+    max-width: 45%;
     text-align: center;
     color: rgb(61, 61, 61);
     background-color: whitesmoke;
@@ -36,12 +36,11 @@ hr:first-child{
 .post-image{
     width: 100%;
     margin: 0 auto;
-    background-color: yellow;
+    background-color: transparent;
     border-radius: 50px 50px 0 0;
 }
 .post-image img{
     transform: scale(1.4);
-    box-shadow: rgb(61, 61, 61);
 }
 .post-image img:hover{
     transition-property: transform;
@@ -58,34 +57,3 @@ hr:first-child{
 footer{
     text-align: center;
 }
-/* .post-date{
-    min-width: 175px;
-    margin: 15px auto;
-    width: 40%;
-    color: white;
-    padding: 10px 0;
-    border-radius: 10px;
-    background-color: rgb(61, 61, 61);
-}
-.post-title{
-    text-decoration: none;
-    color: white;
-    padding: 15px 0;
-    margin: 5px auto 15px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: rgb(61, 61, 61);
-}
-.post-tag{
-    background-color: #E6E6FA;
-    margin: 10px auto;
-    padding: 5px 0;
-    width: 70%;
-    border-radius: 10px;
-}
-.post-image{
-    background-color: red;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-} */

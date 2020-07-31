@@ -23,6 +23,7 @@ const Template = ({ data, pageContext }) => {
 				<Img
 					fluid={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
 					alt="A corgi smiling happily"
+					className="fimage"
 				/>
 				</div>
 				<br />
