@@ -1,6 +1,13 @@
 #posts{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+}
+#posts-row{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 #posts h4{
     text-align: center;
@@ -11,22 +18,47 @@ hr{
 hr:first-child{
     display: none;
 }
-.post{
-    padding: 10px 20px 20px 20px;
+.post-link{
     margin: 30px auto;
     width: 100%;
+    min-width: 300px;
+    max-width: 400px;
     text-align: center;
-    border-radius: 10px;
     color: rgb(61, 61, 61);
-}
-.post:hover{
     background-color: whitesmoke;
-
-}
-.post-link{
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    box-shadow: 5px 5px 3px #aaaaaa;
 }
-.post-date{
+.post-image{
+    width: 100%;
+    margin: 0 auto;
+    background-color: yellow;
+    border-radius: 50px 50px 0 0;
+}
+.post-image img{
+    transform: scale(1.4);
+    box-shadow: rgb(61, 61, 61);
+}
+.post-image img:hover{
+    transition-property: transform;
+    transform: scale(1.5);
+}
+.info{
+    background-color: white;
+    color: black;
+    width: 100%;
+    vertical-align: bottom;
+    border-radius: 0 0 50px 50px;
+    padding: 20px 0;
+}
+footer{
+    text-align: center;
+}
+/* .post-date{
     min-width: 175px;
     margin: 15px auto;
     width: 40%;
@@ -44,10 +76,6 @@ hr:first-child{
     border-radius: 10px;
     background-color: rgb(61, 61, 61);
 }
-.post-description{
-    margin: 20px 0 25px 0;
-    justify-content: space-between;
-}
 .post-tag{
     background-color: #E6E6FA;
     margin: 10px auto;
@@ -56,7 +84,8 @@ hr:first-child{
     border-radius: 10px;
 }
 .post-image{
+    background-color: red;
     width: 100%;
     max-width: 600px;
     margin: 20px auto;
-}
+} */

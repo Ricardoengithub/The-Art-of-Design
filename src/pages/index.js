@@ -17,35 +17,29 @@ const IndexPage = ({ data }) => {
 			<Hashtags />
 			<div id="posts">
 				<h4>También puedes revisar los últimos artículos:</h4>
+				<div id="posts-row">
 				{edges.map((edge, index) => {
 					const { frontmatter } = edge.node;
-					console.log(frontmatter.title)
-					console.log(frontmatter.srcPath)
 					return (
-						<div  key={index}>
 						<Link to={frontmatter.path}                 
-							className="post-link">
-								<div className="post">
-												<h5 className="post-date">
-													{frontmatter.date}
-												</h5>
-												<Img className="post-image"
-													fluid={frontmatter.srcPath.childImageSharp.fluid}
-													alt="A corgi smiling happily"
-												/>
-												<h5 className="post-title">{frontmatter.title}</h5>
-												<p className="post-description">Muse are an English rock band from Teignmouth, Devon, formed in 1994. The band consists of Matt Bellamy (lead vocals, guitar, keyboards), Chris Wolstenholme (bass guitar, backing vocals), and Dominic Howard (drums). </p>                     								
-												<div className="post-tag">
-													{frontmatter.tags.map((tag) => "#" + tag + " ")}
-												</div>
-												
-
-								</div>
-						</Link>		
-						<hr/>				
-					</div>
+							key={index} className="post-link">
+									<Img className="post-image"
+										fluid={frontmatter.srcPath.childImageSharp.fluid}
+										alt="A corgi smiling happily"
+										/>
+									<div className="info">
+										<h5 className="post-date">
+											{frontmatter.date}
+										</h5>
+										<h5 className="post-title">{frontmatter.title}</h5>
+										<div className="post-tag">
+											{frontmatter.tags.map((tag) => "#" + tag + " ")}
+										</div>
+									</div>
+						</Link>						
 					);
 				})}
+				</div>
 			</div>
 		</Layout>
 	);
@@ -68,9 +62,18 @@ export const query = graphql`
 						excerpt
 						srcPath{
 							childImageSharp {
-								fluid {
-								  ...GatsbyImageSharpFluid
-								}
+								fluid(maxWidth: 1000) {
+									base64
+									tracedSVG
+									aspectRatio
+									src
+									srcSet
+									srcWebp
+									srcSetWebp
+									sizes
+									originalImg
+									originalName
+								  }
 							  }
 						}
 					}
