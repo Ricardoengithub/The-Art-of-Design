@@ -7,7 +7,6 @@ import Layout from '../components/layout';
 import Hashtags from './Hashtags'
 import './Index.css';
 
-
 const IndexPage = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
 

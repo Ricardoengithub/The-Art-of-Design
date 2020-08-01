@@ -1,15 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from "gatsby-image"
 import './Header.css'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ data, siteTitle }) => (
   <header
   >
     <div
       id="head"
     >
-      <h4 id="head-title" style={{ margin: 0 }}>
+
         <Link
           to="/"
           style={{
@@ -17,12 +18,12 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
+      <h4 id="head-title" style={{ margin: 0 }}>
           {/* {siteTitle} */}
           The art of design
-        </Link>
       </h4>
+        </Link>
 
-      <h4 id="head-topics" style={{ margin: 0 }}>
         <Link 
         to="/tags"
         style={{
@@ -30,12 +31,14 @@ const Header = ({ siteTitle }) => (
           textDecoration: `none`,
         }}
         >
+      <h4 id="head-topics" style={{ margin: 0 }}>
           #Topics
-        </Link>
       </h4>
+        </Link>
     </div>
   </header>
 )
+
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
