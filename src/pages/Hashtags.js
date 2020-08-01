@@ -19,7 +19,7 @@ class Hashtags extends React.Component{
                 <ul>
                     <li><Link to="/tags/architecture"><FaHashtag /> Architecture</Link></li>
                     <li><Link to="/tags/technology"><FaHashtag /> Technology</Link></li>
-                    <li><Link to="/tags/tools"> <FaHashtag /> Tools</Link></li>
+                    <li><Link to="/tags/things"> <FaHashtag /> Things</Link></li>
                     <li><Link to="/tags/ux"><FaHashtag /> UX</Link></li>                    
                 </ul>
             </div>
