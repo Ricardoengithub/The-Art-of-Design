@@ -39,7 +39,8 @@ hr:first-child{
     background-color: transparent;
     border-radius: 50px 50px 0 0;
     border-bottom: 5px solid whitesmoke;
-    height: 400px;
+    height: 350px;
+    max-height: 350px;
 }
 .post-image img{
     transform: scale(1.4);
