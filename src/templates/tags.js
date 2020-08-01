@@ -14,7 +14,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <div className="air">
       <Helmet title={tag + " / The Art of Design"} />
-      <h1>{tagHeader}</h1>
+      <h3>{tagHeader}</h3>
       <ul>
         {edges.map(({ node }) => {
           const { title } = node.frontmatter

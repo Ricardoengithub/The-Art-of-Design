@@ -17,7 +17,7 @@ const Template = ({ data, pageContext }) => {
 		<div>
 			<Helmet title={title + " | The Art of Design"} />
 			<div className="air">
-				<h1 id="title">{title}</h1>
+				<h2 id="title">{title}</h2>
 				<div>
 					<em id="date">{date}</em>
 				<Img
