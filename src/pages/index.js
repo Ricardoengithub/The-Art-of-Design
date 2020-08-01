@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
 				{edges.map((edge, index) => {
 					const { frontmatter } = edge.node;
 					return (
-						<Link to={frontmatter.path + "#title"}                 
+						<Link to={frontmatter.path + "#topp"}                 
 							key={index} className="post-link">
 									<Img className="post-image"
 										fluid={frontmatter.srcPath.childImageSharp.fluid}

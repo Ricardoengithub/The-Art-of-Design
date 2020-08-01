@@ -15,9 +15,12 @@
   border: 2px solid black;
 }
 #title{
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
-
+#topp{
+  position: relative;
+  top: -5px;
+}
 
 @media print {
     *,
