@@ -28,10 +28,12 @@ const IndexPage = ({ data }) => {
 										alt="A corgi smiling happily"
 										/>
 									<div className="info">
-										<h5 className="post-date">
-											{frontmatter.date}
-										</h5>
-										<h5 className="post-title">{frontmatter.title}</h5>
+										<h4 className="post-date">
+											<small>
+												<em>{frontmatter.date}</em>
+											</small>
+										</h4>
+										<h3 className="post-title">{frontmatter.title}</h3>
 										<div className="post-tag">
 											{frontmatter.tags.map((tag) => "#" + tag + " ")}
 										</div>

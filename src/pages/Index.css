@@ -54,7 +54,16 @@ hr:first-child{
     width: 100%;
     vertical-align: bottom;
     border-radius: 0 0 50px 50px;
-    padding: 20px 0;
+    padding: 5px 0;
+}
+.post-date{
+    margin: 0 0;
+}
+.post-title{
+    margin: 2px 0;
+}
+.post-tag{
+    margin: 2px 0;
 }
 footer{
     text-align: center;

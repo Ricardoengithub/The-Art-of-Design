@@ -16,5 +16,6 @@ header{
     max-width: 1000px;
 }
 #head-title, #head-topics{
-  font-family: 'Helvetica';
+  font-family: 'Lato';
+  font-weight: bold;
 }
