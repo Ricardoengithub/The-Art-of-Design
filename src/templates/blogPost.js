@@ -25,6 +25,7 @@ const Template = ({ data, pageContext }) => {
 					alt="A corgi smiling happily"
 					className="fimage"
 				/>
+				{console.log(data)}
 				</div>
 				<br />
 				<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
