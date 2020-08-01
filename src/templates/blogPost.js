@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import Options from './Options';
+import Header from '../components/header';
 
 import './blogPost.css'
 
@@ -16,6 +17,7 @@ const Template = ({ data, pageContext }) => {
 	return (
 		<div>
 			<Helmet title={title + " | The Art of Design"} />
+			<Header />
 			<div className="air">
 				<h2 id="title">{title}</h2>
 				<div>

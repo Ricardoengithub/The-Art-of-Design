@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
         }}
         >
       <h5 id="head-topics" style={{ margin: 0 }}>
-          #Topics
+          #Tags
       </h5>
         </Link>
     </div>
@@ -43,12 +43,11 @@ const Header = ({ siteTitle }) => (
 
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-  data: PropTypes.string
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `The Art of Design`,
 }
 
 export default Header

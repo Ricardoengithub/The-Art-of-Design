@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby";
 import { Helmet } from "react-helmet"
+import Header from '../components/header';
+
 
 const Tags = ({ pageContext, data }) => {
     console.log(data)
@@ -12,24 +14,27 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
   return (
-    <div className="air">
-      <Helmet title={tag + " / The Art of Design"} />
-      <h3>{tagHeader}</h3>
-      <ul>
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter
-          return (
-            <li key={title}>
-              <Link to={node.frontmatter.path}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-      <Link to="/tags">All tags</Link>
+    <div>
+      <Header />
+      <div className="air">
+        <Helmet title={tag + " / The Art of Design"} />
+        <h3>{tagHeader}</h3>
+        <ul>
+          {edges.map(({ node }) => {
+            const { title } = node.frontmatter
+            return (
+              <li key={title}>
+                <Link to={node.frontmatter.path}>{title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+        {/*
+                This links to a page that does not yet exist.
+                You'll come back to it!
+              */}
+        <Link to="/tags">All tags</Link>
+      </div>
     </div>
   )
 }

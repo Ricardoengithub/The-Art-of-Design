@@ -7,6 +7,8 @@ import kebabCase from "lodash/kebabCase"
 // Components
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
+import Header from '../components/header';
+
 
 const TagsPage = ({
   data: {
@@ -16,8 +18,10 @@ const TagsPage = ({
     },
   },
 }) => (
+  <div>
+  <Helmet title={"Tags | The Art of Design"} />
+  <Header />
   <div className="air">
-    <Helmet title={"Tags | The Art of Design"} />
     <div>
       <h3>Tags</h3>
       <ul>
@@ -30,6 +34,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
+  </div>
   </div>
 )
 
