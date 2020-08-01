@@ -10,7 +10,11 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
-    padding: 5px;
+    padding: 10px;
+    max-width: 1000px;
+}
+#head-title, #head-topics{
+  font-family: 'Helvetica';
 }

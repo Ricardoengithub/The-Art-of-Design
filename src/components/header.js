@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
     <div
       id="head"
     >
-      <h3 style={{ margin: 0 }}>
+      <h3 id="head-title" style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -18,11 +18,11 @@ const Header = ({ siteTitle }) => (
           }}
         >
           {/* {siteTitle} */}
-          !$·%/()
+          The art of design
         </Link>
       </h3>
 
-      <h3 style={{ margin: 0 }}>
+      <h3 id="head-topics" style={{ margin: 0 }}>
         <Link 
         to="/tags"
         style={{
