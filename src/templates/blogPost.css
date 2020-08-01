@@ -7,7 +7,8 @@
 }
 .fimage{
   background-color: black;  
-  margin: 20px 0;
+  width: 90%;
+  margin: 20px auto;
 }
 .fimage img{
   transform: scale(1.45);
@@ -158,9 +159,7 @@
   textarea {
     max-width: 100%;
   }
-  
-  @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
-  
+    
   .air {
     color: rgb(44, 44, 44);
     font-family: Helvetica, sans-serif;
