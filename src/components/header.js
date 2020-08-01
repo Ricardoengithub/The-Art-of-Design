@@ -13,12 +13,12 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: 'black',
+            color: 'white',
             textDecoration: `none`,
           }}
         >
           {/* {siteTitle} */}
-          TAD
+          !$·%/()
         </Link>
       </h3>
 
@@ -30,7 +30,7 @@ const Header = ({ siteTitle }) => (
           textDecoration: `none`,
         }}
         >
-          Topics
+          #Topics
         </Link>
       </h3>
     </div>
