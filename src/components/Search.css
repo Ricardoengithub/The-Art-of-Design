@@ -13,9 +13,8 @@
     margin: 3px auto;
 }
 #search input{
-    width: 80%;
+    width: 70%;
     background-color: red;
-    max-width: 700px;
     height: 35px;
     line-height: 20px;
     outline: 0;
