@@ -17,10 +17,10 @@ class Hashtags extends React.Component{
                 <h3>Elige uno de los siguientes temas que te interese.</h3>
                 <h4>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h4>
                 <ul>
-                    <li><Link to="/tags/architecture"><FaHashtag /> Architecture</Link></li>
-                    <li><Link to="/tags/technology"><FaHashtag /> Technology</Link></li>
-                    <li><Link to="/tags/things"> <FaHashtag /> Things</Link></li>
-                    <li><Link to="/tags/ux"><FaHashtag /> UX</Link></li>                    
+                    <Link to="/tags/architecture"><li><FaHashtag /> Architecture</li></Link>
+                    <Link to="/tags/technology"><li><FaHashtag /> Technology</li></Link>
+                    <Link to="/tags/things"> <li><FaHashtag /> Things</li></Link>
+                    <Link to="/tags/ux"><li><FaHashtag /> UX</li> </Link>
                 </ul>
             </div>
         )
