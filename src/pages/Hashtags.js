@@ -1,30 +1,54 @@
 import React from 'react';
-import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import { Link, graphql, StaticQuery } from "gatsby"
 import './Hashtags.css'
 import { FaHashtag } from 'react-icons/fa';
 
-class Hashtags extends React.Component{
-    constructor(){
-        super()
-        this.state = {
+// Utilities
+import kebabCase from "lodash/kebabCase"
 
+const Hashtags = ({ }) => (
+
+    <StaticQuery query = {graphql`
+        query pageQuery{
+            allMarkdownRemark(limit: 2000) {
+                group(field: frontmatter___tags) {
+                fieldValue
+                totalCount
+                }
+            }
         }
-    }
+    `}
+    render = {data => (
+        <div id="hashtags">
+        <h3>Elige uno de los siguientes temas que te interese.</h3>
+        <h4>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h4>
+        <ul>
+            {data.allMarkdownRemark.group.map(tag => (
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}><li><FaHashtag /> {tag.fieldValue}</li></Link>
+            // <Link to="/tags/technology"><li><FaHashtag /> Technology</li></Link>
+            // <Link to="/tags/things"> <li><FaHashtag /> Things</li></Link>
+            // <Link to="/tags/ux"><li><FaHashtag /> UX</li> </Link>
+            ))}
+        </ul>
+    </div>
+    )}
+    />
+  )
 
-    render(){
-        return(
-            <div id="hashtags">
-                <h3>Elige uno de los siguientes temas que te interese.</h3>
-                <h4>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h4>
-                <ul>
-                    <Link to="/tags/architecture"><li><FaHashtag /> Architecture</li></Link>
-                    <Link to="/tags/technology"><li><FaHashtag /> Technology</li></Link>
-                    <Link to="/tags/things"> <li><FaHashtag /> Things</li></Link>
-                    <Link to="/tags/ux"><li><FaHashtag /> UX</li> </Link>
-                </ul>
-            </div>
-        )
-    }
-}
+Hashtags.propTypes = {
+    data: PropTypes.shape({
+      allMarkdownRemark: PropTypes.shape({
+        group: PropTypes.arrayOf(
+          PropTypes.shape({
+            fieldValue: PropTypes.string.isRequired,
+            totalCount: PropTypes.number.isRequired,
+          }).isRequired
+        ),
+      }),
+    }),
+  }
+
+
 
 export default Hashtags;
