@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO title="My Amazing Gatsby App" />
+			<SEO title="The Art of design" description="A design articles site."/>
 			<Helmet title={"Home | The Art of Design"} />
 			<Hashtags />
 			<div id="posts">

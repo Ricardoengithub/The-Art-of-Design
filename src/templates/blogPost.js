@@ -19,7 +19,7 @@ const Template = ({ data, pageContext }) => {
 		<div>
 			<SEO
 				title={title}
-				description={data.site.description || data.markdownRemark.frontmatter.excerpt}
+				description={data.markdownRemark.frontmatter.excerpt}
 				image={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
 				pathname={data.site.siteUrl + data.markdownRemark.frontmatter.path}
 			/>
