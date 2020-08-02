@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout';
+import SEO from "../components/seo"
 import Hashtags from './Hashtags'
 import './Index.css';
 
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
+			<SEO title="My Amazing Gatsby App" />
 			<Helmet title={"Home | The Art of Design"} />
 			<Hashtags />
 			<div id="posts">

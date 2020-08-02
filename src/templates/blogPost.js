@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import Options from './Options';
 import Header from '../components/header';
+import SEO from "../components/seo"
 
 import './blogPost.css'
 
@@ -16,6 +17,12 @@ const Template = ({ data, pageContext }) => {
 
 	return (
 		<div>
+			<SEO
+				title={title}
+				description={data.site.description || data.markdownRemark.frontmatter.excerpt}
+				image={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
+				pathname={data.site.siteUrl + data.markdownRemark.frontmatter.path}
+			/>
 			<Helmet title={title + " | The Art of Design"} />
 			<Header />
 			<div id="topp"/>
@@ -55,6 +62,14 @@ const Template = ({ data, pageContext }) => {
 
 export const postQuery = graphql`
 	query($pathSlug: String!) {
+		site {
+			siteMetadata {
+			  title
+			  description
+			  author
+			  siteUrl
+			}
+		}
 		markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
 			html
 			frontmatter {

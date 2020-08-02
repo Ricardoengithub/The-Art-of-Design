@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `The Art of Design`,
-    description: `Hello world!`,
+    description: `A site of design articles`,
     author: `@Ricardoentuiter`,
+    keywords: ['Design','Studio'],
     siteUrl: 'https://www.theartofdesign.studio'
   },
   plugins: [
