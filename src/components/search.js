@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
+import { FaTimes, FaSearch } from "react-icons/fa"
 import './Search.css'
 
 // Search component
@@ -10,17 +11,32 @@ export default class Search extends Component {
     this.state = {
       query: ``,
       results: [],
-    }
+    }    
+    this.reset = this.reset.bind(this);
+  }
+
+  reset(e){
+      e.preventDefault();
+      this.setState({
+        query: ``,
+        results: [],          
+      })
   }
 
   render() {
     return (
       <div id="search">
-        <input type="text" value={this.state.query} onChange={this.search} placeholder="Search..." />
+            <div id="search-bar">
+                <input type="text" value={this.state.query} onChange={this.search} />
+                {this.state.query === `` ? <FaSearch className="fa fa-search"   /> : <FaTimes className="fa fa-times" onClick={e => this.reset(e)}/>}
+            </div>
+
+                    
+            
         <ul>
           {this.state.results.map(page => (
-            <li key={page.id}>
-              <Link to={"https://www.theartofdesign.studio/" + page.path + "#topp"}>{page.title}</Link>
+            <li key={page.id} onClick={e => this.reset(e)}>
+              <Link to={page.path + "#topp"}>{page.title}</Link>
               {": " + page.tags.join(`,`)}
             </li>
           ))}

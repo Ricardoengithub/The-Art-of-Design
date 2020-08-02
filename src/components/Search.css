@@ -1,34 +1,53 @@
-
+/* body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: #07051a;
+} */
 #search{
     width: 40%;
-    outline: none;
-    height: 40px;
-    top: 5px;
-    position: relative;
-    margin: 0 auto;
-  }
-  #search input{
-    height: 30px;
+}
+#search-bar{
     width: 100%;
-    transition-property: width;
-    transition-duration: 1s;
-  }
-  #search ul{
-      width: 100%;
-      position: absolute;
-      left: -23px;
-  }
-  #search ul li{
-    padding: 10px 10px;
-    list-style: none;
-    background-color: rgb(251, 251, 251);
-    border-left: 1px solid rgba(179, 179, 179, 0.459);
-    border-bottom: 1px solid rgba(179, 179, 179, 0.459);
-    border-right: 1px solid rgba(179, 179, 179, 0.459);
-  }
-  #search ul hr{
-      margin-top: 5px;
-      height: 1px;
-      background-color: #ccc;
-      border: none;
-  }
+    margin: 3px auto;
+}
+
+#search input{
+    width: 80%;
+    background-color: red;
+    max-width: 700px;
+    height: 35px;
+    line-height: 20px;
+    outline: 0;
+    border: 0;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 15px;
+    margin: 0 0;
+    background-color: whitesmoke;
+}
+
+.fa{
+    position: relative;
+    top: 5px;
+    right: 0;
+    font-size: 1.5em;
+    padding: 3px;
+    transition: all 1s;
+}
+.fa-search{
+    background-color: transparent;
+    color: black;
+}
+.fa-times{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+}
+
+
+
+#search ul{
+    position: absolute;
+}
