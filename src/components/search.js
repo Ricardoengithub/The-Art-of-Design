@@ -27,7 +27,7 @@ export default class Search extends Component {
     return (
       <div id="search">
             <div id="search-bar">
-                <input type="text" value={this.state.query} onChange={this.search} />
+                <input type="text" value={this.state.query} onChange={this.search} placeholder="Search..." />
                 {this.state.query === `` ? <FaSearch className="fa fa-search"   /> : <FaTimes className="fa fa-times" onClick={e => this.reset(e)}/>}
             </div>
 

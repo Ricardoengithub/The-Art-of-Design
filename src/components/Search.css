@@ -6,13 +6,12 @@
     background: #07051a;
 } */
 #search{
-    width: 40%;
+    width: 45%;
 }
 #search-bar{
     width: 100%;
     margin: 3px auto;
 }
-
 #search input{
     width: 80%;
     background-color: red;
@@ -27,7 +26,10 @@
     margin: 0 0;
     background-color: whitesmoke;
 }
-
+#search input:focus{
+    background-color: white;
+    border: 3px solid whitesmoke;
+}
 .fa{
     position: relative;
     top: 5px;
@@ -45,9 +47,6 @@
     color: white;
     border-radius: 50%;
 }
-
-
-
 #search ul{
     position: absolute;
 }
