@@ -27,14 +27,12 @@ export default class Search extends Component {
     return (
       <div id="search">
             <div id="search-bar">
-                <input type="text" value={this.state.query} onChange={this.search} placeholder="Search..." />
+                <input type="text" value={this.state.query} onChange={this.search} placeholder="Buscar..." />
                 {this.state.query === `` ? <FaSearch className="fa fa-search"   /> : <FaTimes className="fa fa-times" onClick={e => this.reset(e)}/>}
-            </div>
-
-                    
-            
+            </div> 
         <ul>
           {this.state.results.map(page => (
+            // eslint-disable-next-line
             <li key={page.id} onClick={e => this.reset(e)}>
               <Link to={page.path + "#topp"}>{page.title}</Link>
               {": " + page.tags.join(`,`)}
@@ -44,6 +42,7 @@ export default class Search extends Component {
       </div>
     )
   }
+  
   getOrCreateIndex = () =>
     this.index
       ? this.index

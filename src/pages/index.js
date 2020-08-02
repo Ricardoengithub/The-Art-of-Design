@@ -49,7 +49,6 @@ const IndexPage = ({ data }) => {
 };
 
 
-
 export const query = graphql`
 	query HomePageQuery {
 		allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date } limit: 4) {

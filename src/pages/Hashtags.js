@@ -7,7 +7,7 @@ import { FaHashtag } from 'react-icons/fa';
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
-const Hashtags = ({ }) => (
+const Hashtags = () => (
 
     <StaticQuery query = {graphql`
         query pageQuery{
@@ -26,9 +26,6 @@ const Hashtags = ({ }) => (
         <ul>
             {data.allMarkdownRemark.group.map(tag => (
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}><li><FaHashtag /> {tag.fieldValue}</li></Link>
-            // <Link to="/tags/technology"><li><FaHashtag /> Technology</li></Link>
-            // <Link to="/tags/things"> <li><FaHashtag /> Things</li></Link>
-            // <Link to="/tags/ux"><li><FaHashtag /> UX</li> </Link>
             ))}
         </ul>
     </div>
