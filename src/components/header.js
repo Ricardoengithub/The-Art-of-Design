@@ -1,14 +1,23 @@
-import { Link } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from "prop-types"
 import React from "react"
 
-import Image from '../components/image'
+import Search from "./search"
+import Image from './image'
 import './Header.css'
 
 
 const Header = ({ siteTitle }) => (
-  <header
-  >
+  <StaticQuery
+    query={graphql`
+      query SearchIndexQuery {
+        siteSearchIndex {
+          index
+        }
+      }
+    `}
+    render={data => (
+      <header>
     <div
       id="head"
     >
@@ -26,6 +35,7 @@ const Header = ({ siteTitle }) => (
           </div>
         </Link>
 
+        <Search searchIndex={data.siteSearchIndex.index} />
         <Link 
         to="/tags"
         style={{
@@ -38,7 +48,9 @@ const Header = ({ siteTitle }) => (
       </h5>
         </Link>
     </div>
-  </header>
+      </header>
+    )}
+  />
 )
 
 
