@@ -14,7 +14,7 @@
 }
 .post-link{
     margin: 30px auto;
-    width: 300px;
+    width: 250px;
     text-align: center;
     color: rgb(61, 61, 61);
     background-color: whitesmoke;
@@ -31,7 +31,7 @@
     background-color: transparent;
     border-radius: 50px 50px 0 0;
     border-bottom: 5px solid whitesmoke;
-    height: 250px;
+    height: 200px;
 }
 .post-image img:hover{
     transition-property: transform;

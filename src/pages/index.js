@@ -64,7 +64,7 @@ export const query = graphql`
 						excerpt
 						srcPath{
 							childImageSharp {
-								fixed(width: 300, height: 250){
+								fixed(width: 250, height: 200){
 									...GatsbyImageSharpFixed
 								}
 							}
