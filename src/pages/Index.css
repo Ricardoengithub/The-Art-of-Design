@@ -12,17 +12,9 @@
 #posts h4{
     text-align: center;
 }
-hr{
-    height:2px;border-width:0;color:gray;background-color:gray
-}
-hr:first-child{
-    display: none;
-}
 .post-link{
     margin: 30px auto;
-    width: 100%;
-    min-width: 275px;
-    max-width: 45%;
+    width: 300px;
     text-align: center;
     color: rgb(61, 61, 61);
     background-color: whitesmoke;
@@ -39,14 +31,11 @@ hr:first-child{
     background-color: transparent;
     border-radius: 50px 50px 0 0;
     border-bottom: 5px solid whitesmoke;
-    height: 320px;
-}
-.post-image img{
-    transform: scale(1.4);
+    height: 250px;
 }
 .post-image img:hover{
     transition-property: transform;
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .info{
     background-color: white;
@@ -58,11 +47,14 @@ hr:first-child{
 }
 .post-date{
     margin: 0 0;
+    font-family: 'Lato';
 }
 .post-title{
-    margin: 0 0 2px 0;
+    font-family: 'Lato';
+    margin: 5px 0 5px 0;
 }
 .post-tag{
+    font-family: 'Lato';
     margin: 2px 0;
 }
 footer{

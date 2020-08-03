@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<SEO title="The Art of design" description="A design articles site."/>
-			<Helmet title={"Home | The Art of Design"} />
+			<Helmet title={"Home"} />
 			<Hashtags />
 			<div id="posts">
 				<h4>También puedes revisar los últimos artículos:</h4>
@@ -25,16 +25,16 @@ const IndexPage = ({ data }) => {
 						<Link to={frontmatter.path + "#topp"}                 
 							key={index} className="post-link">
 									<Img className="post-image"
-										fluid={frontmatter.srcPath.childImageSharp.fluid}
+										fixed={frontmatter.srcPath.childImageSharp.fixed}
 										alt="A corgi smiling happily"
 										/>
 									<div className="info">
+										<h3 className="post-title">{frontmatter.title}</h3>
 										<h4 className="post-date">
 											<small>
 												<em>{frontmatter.date}</em>
 											</small>
 										</h4>
-										<h3 className="post-title">{frontmatter.title}</h3>
 										<div className="post-tag">
 											{frontmatter.tags.map((tag) => "#" + tag + " ")}
 										</div>
@@ -64,19 +64,10 @@ export const query = graphql`
 						excerpt
 						srcPath{
 							childImageSharp {
-								fluid(maxWidth: 1000) {
-									base64
-									tracedSVG
-									aspectRatio
-									src
-									srcSet
-									srcWebp
-									srcSetWebp
-									sizes
-									originalImg
-									originalName
-								  }
-							  }
+								fixed(width: 300, height: 250){
+									...GatsbyImageSharpFixed
+								}
+							}
 						}
 					}
 				}

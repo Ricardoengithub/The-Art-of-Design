@@ -23,19 +23,19 @@ const Template = ({ data, pageContext }) => {
 				image={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
 				pathname={data.site.siteUrl + data.markdownRemark.frontmatter.path}
 			/>
-			<Helmet title={title + " | The Art of Design"} />
+			<Helmet title={title} />
 			<Header />
 			<div id="topp"/>
 			<div className="air">
-				<h2 id="title">{title}</h2>
-				<div>
-					<em id="date">{date}</em>
+				<div id="title">
+					<h1 >{title}</h1>
+					<small><em>{date}</em></small>
+				</div>
 				<Img
 					fluid={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
 					alt="A corgi smiling happily"
 					className="fimage"
 				/>
-				</div>
 				<br />
 				<div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
 				<div id="navigation">

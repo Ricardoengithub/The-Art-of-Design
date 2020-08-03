@@ -10,9 +10,9 @@ const Tags = ({ pageContext, data }) => {
     console.log(data)
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  const tagHeader = `${totalCount === 1 ? "Una" : totalCount} publicación${
+    totalCount === 1 ? "" : "es"
+  } en "${tag}"`
   return (
     <div>
       <Header />
