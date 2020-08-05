@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import Options from './Options';
@@ -23,7 +22,6 @@ const Template = ({ data, pageContext }) => {
 				image={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
 				pathname={data.site.siteUrl + data.markdownRemark.frontmatter.path}
 			/>
-			<Helmet title={title} />
 			<Header />
 			<div id="topp"/>
 			<div className="air">

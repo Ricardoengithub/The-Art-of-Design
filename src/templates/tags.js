@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby";
 import { Helmet } from "react-helmet"
 import Header from '../components/header';
+import SEO from "../components/seo"
 
 
 const Tags = ({ pageContext, data }) => {
@@ -17,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
     <div>
       <Header />
       <div className="air">
-        <Helmet title={tag + " / The Art of Design"} />
+        <SEO title={tag} />
         <h3>{tagHeader}</h3>
         <ul>
           {edges.map(({ node }) => {

@@ -5,9 +5,9 @@ import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 
 // Components
-import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
-import Header from '../components/header';
+import Header from '../components/header'
+import SEO from "../components/seo"
 
 
 const TagsPage = ({
@@ -19,7 +19,7 @@ const TagsPage = ({
   },
 }) => (
   <div>
-  <Helmet title={"Tags | The Art of Design"} />
+  <SEO title={"Tags"} />
   <Header />
   <div className="air">
     <div>
