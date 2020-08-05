@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby";
-import { Helmet } from "react-helmet"
 import Header from '../components/header';
 import SEO from "../components/seo"
 
