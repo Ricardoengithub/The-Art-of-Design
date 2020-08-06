@@ -2,11 +2,51 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
+import styled from "@emotion/styled"
 
 import Layout from '../components/layout';
 import SEO from "../components/seo"
 import Hashtags from './Hashtags'
-import './Index.css';
+
+const PostCard = styled.div`
+	margin: 30px auto;
+	width: 250px;
+	text-decoration: none;
+	border-radius: 50px;
+	box-shadow: 1px 1px 20px #aaaaaa;
+	text-decoration: none;
+	
+	:hover{
+		transform: scale(1.05)
+	}
+	
+	& a {
+		text-decoration: none;
+		color: black;
+		font-family: 'Lato';
+	}
+	& img{
+		width: 100%;
+		margin: 0 auto;
+		background-color: transparent;
+		border-radius: 50px 50px 0 0;
+		height: 200px;
+	}
+	& h3{
+		margin: 0 0 5px 0;
+	}
+	& h4{
+		margin: 0 0;
+	}
+`
+
+const Posts = styled.div`
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+`
 
 const IndexPage = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
@@ -16,34 +56,33 @@ const IndexPage = ({ data }) => {
 			<SEO title="The Art of design" description="A design articles site."/>
 			<Helmet title={"Home"} />
 			<Hashtags />
-			<div id="posts">
-				<h4>También puedes revisar los últimos artículos:</h4>
-				<div id="posts-row">
+			<h4>También puedes revisar los últimos artículos:</h4><br/>
+			<Posts>
 				{edges.map((edge, index) => {
 					const { frontmatter } = edge.node;
 					return (
-						<Link to={frontmatter.path + "#topp"}                 
-							key={index} className="post-link">
-									<Img className="post-image"
-										fixed={frontmatter.srcPath.childImageSharp.fixed}
-										alt="A corgi smiling happily"
-										/>
-									<div className="info">
-										<h3 className="post-title">{frontmatter.title}</h3>
-										<h4 className="post-date">
-											<small>
-												<em>{frontmatter.date}</em>
-											</small>
-										</h4>
-										<div className="post-tag">
-											{frontmatter.tags.map((tag) => "#" + tag + " ")}
-										</div>
-									</div>
-						</Link>						
+						<PostCard>
+							<Link to={frontmatter.path + "#topp"}                 
+								key={index}>
+											<Img
+												fixed={frontmatter.srcPath.childImageSharp.fixed}
+												alt="A corgi smiling happily"
+												/>
+											<h3>{frontmatter.title}</h3>
+											<h4>
+												<small>
+													<em>{frontmatter.date}</em>
+												</small>
+											</h4>
+											<p>
+												{frontmatter.tags.map((tag) => "#" + tag + " ")}
+											</p>
+										
+							</Link>
+						</PostCard>				
 					);
 				})}
-				</div>
-			</div>
+			</Posts>
 		</Layout>
 	);
 };
