@@ -1,5 +1,5 @@
 html{
-  font-size: 16px
+  font-size: 17px
 }
 
 
@@ -13,7 +13,7 @@ html{
 }
 .fimage{
   background-color: black;  
-  width: 80%;
+  width: 50%;
   margin: 20px auto;
 }
 .fimage img{
@@ -30,13 +30,12 @@ html{
 }
 
 
-    
 .air {
   font-family: Helvetica, sans-serif;
   font-weight: 300;
   margin: 2rem auto 1rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: 65rem;
 }
 .blogpost{
   width: 90%;
@@ -44,7 +43,9 @@ html{
 }
 
 h1,h2,h3,h4,h5,h6{
+  color: black;
   font-family: 'Lato';
+  font-weight: 600;
   text-align: center;
 }
 
@@ -68,10 +69,11 @@ ul,
 ol,
 li {
   text-align: left;
-  color: rgb(73, 73, 73);
+  color: black;
 }
 
 p {
+  color: black;
   font-size: 1rem;
   margin-bottom: 1.2rem;
   text-align: justify;

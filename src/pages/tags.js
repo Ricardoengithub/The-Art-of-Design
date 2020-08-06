@@ -21,7 +21,7 @@ const TagsPage = ({
   <div>
   <SEO title={"Tags"} />
   <Header />
-  <div className="air">
+  <div className="air" style={{maxWidth: `50rem`}}>
     <div>
       <h3>Tags</h3>
       <ul>

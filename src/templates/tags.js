@@ -16,7 +16,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <div>
       <Header />
-      <div className="air">
+      <div className="air" style={{maxWidth: `50rem`}}>
         <SEO title={tag} />
         <h3>{tagHeader}</h3>
         <ul>
