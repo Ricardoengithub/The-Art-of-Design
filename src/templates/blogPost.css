@@ -17,10 +17,6 @@ html{
   margin: 20px auto;
   border-radius: 30px;
 }
-.fimage img{
-  transform: scale(1.45);
-  border: 2px solid black;
-}
 #title{
   padding-top: 1rem;
   text-align: center;
@@ -78,4 +74,8 @@ p {
   font-size: 1rem;
   margin-bottom: 1.2rem;
   text-align: justify;
+}
+.air img{
+  border-radius: 30px;
+  background-color: white;
 }
