@@ -2,8 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby";
-import Header from '../components/header';
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import { TagsStyle } from "../styles/styles"
 
 
 const Tags = ({ pageContext, data }) => {
@@ -14,9 +15,8 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "es"
   } en "${tag}"`
   return (
-    <div>
-      <Header />
-      <div className="air" style={{maxWidth: `50rem`}}>
+    <Layout>
+      <TagsStyle>
         <SEO title={tag} />
         <h3>{tagHeader}</h3>
         <ul>
@@ -34,8 +34,8 @@ const Tags = ({ pageContext, data }) => {
                 You'll come back to it!
               */}
         <Link to="/tags"><h4>All tags</h4></Link>
-      </div>
-    </div>
+      </TagsStyle>
+    </Layout>
   )
 }
 Tags.propTypes = {
