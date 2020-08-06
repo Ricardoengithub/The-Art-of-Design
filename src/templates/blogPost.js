@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from "gatsby-image"
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-import Options from './Options';
 import Header from '../components/header';
 import SEO from "../components/seo"
 
@@ -51,7 +50,6 @@ const Template = ({ data, pageContext }) => {
 							</Link>
 						)}
 				</div>
-				<Options />
 			</div>
 		</div>
 	);
