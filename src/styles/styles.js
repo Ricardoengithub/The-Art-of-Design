@@ -228,7 +228,7 @@ export const Post = styled.div`
 `
 
 export const BlogPost = styled.div`
-  width: 100%;
+  width: 90%;
   margin: 0 auto 30px;
   max-width: 55rem;
   font-family: Helvetica;
