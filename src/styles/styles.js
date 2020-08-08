@@ -147,10 +147,6 @@ export const SearchBar = styled.div`
     }
   }
 
-  #search:focus + #resultados{
-    margin-bottom: 100vh;
-  }
-
   & ul{
    list-style-type: none;
     width: 100%;

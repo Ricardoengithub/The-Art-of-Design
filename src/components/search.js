@@ -12,8 +12,10 @@ export default class Search extends Component {
     this.state = {
       query: ``,
       results: [],
+      focused: 0,
     }    
     this.reset = this.reset.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   componentDidMount() {
@@ -33,8 +35,16 @@ export default class Search extends Component {
           this.setState({
               query: ``,
               results: [],
+              focused: 0,
           });
       }
+  }
+
+  handleFocus(e){
+    e.preventDefault();
+    this.setState({
+      focused: 1
+    })
   }
 
   reset(e){
@@ -50,9 +60,9 @@ export default class Search extends Component {
       <SearchBar>
         <h2>Realiza una búsqueda de un objeto o lugar: </h2>
           <form>
-            <input type="search" placeholder="Buscar..." value={this.state.query} onChange={this.search} id="search"/>
+            <input type="search" placeholder="Buscar..." value={this.state.query} onChange={this.search} onFocus={e => this.handleFocus(e)}/>
           </form>
-          <ul id="resultados">
+          <ul style={this.state.focused === 0 ? {} : {marginBottom: `100vh`}}>
             {this.state.results.map(page => (
               // eslint-disable-next-line
               <Link to={page.path + "#topp"} key={page.id}>
