@@ -123,8 +123,9 @@ export const SearchBar = styled.div`
     width: 100%;
     max-width: 500px;
     margin: 6rem auto 0;
-        
+    
     input[type=search] {
+      -webkit-appearance: none;
       width: 95%;
       height: 50px;
       padding: 0 0 0 10px;
