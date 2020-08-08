@@ -141,7 +141,7 @@ export const SearchBar = styled.div`
         z-index:7;
         text-align: center;
         border:solid 3px #09f;      
-        outline:solid #56556e 2000px;
+        outline:solid ${props => props.color} 2000px;
         transition: all 0.3s ease-in 0s;
       }
     }
@@ -159,16 +159,16 @@ export const SearchBar = styled.div`
 
   & ul a{
     margin: 0;
-    color: lightblue;
+    color: white;
     font-family: LatoB;
   }
   & ul a:hover{
-    color: white;
+    color: whitesmoke;
   }
   & ul a li{
     padding: 10px 0;
     margin: 0;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid white;
   }
 
 `
