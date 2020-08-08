@@ -8,7 +8,6 @@ export const Wrapper = styled("div")`
   color: black;
   background-color: #ffffff;
   background-image: url(${myImage});
-  background-attachment: fixed;
   background-size: cover;
   /* background by SVGBackgrounds.com */
 
