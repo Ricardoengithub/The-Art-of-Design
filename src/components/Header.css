@@ -1,8 +1,4 @@
-header{
-  background-color: white;
-  border-bottom: 5px solid whitesmoke;
-}  
-#head {
+ #head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

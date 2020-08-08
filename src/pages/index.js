@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import Layout from '../components/layout';
 import SEO from "../components/seo"
 import Hashtags from './Hashtags'
+import Search from '../components/search';
 
 import { Posts, PostCard} from "../styles/styles"
 
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => {
 		<Layout>
 			<SEO title="The Art of design" description="A design articles site."/>
 			<Helmet title={"Home"} />
+			<Search searchIndex={data.siteSearchIndex.index} />
 			<Hashtags />
 			<Posts>
 				{edges.map((edge, index) => {
@@ -72,6 +74,9 @@ export const query = graphql`
 				}
 			}
 		}
+		siteSearchIndex {
+			index
+		  }
 	}
 `;
 

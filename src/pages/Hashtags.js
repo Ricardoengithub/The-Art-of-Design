@@ -22,8 +22,8 @@ const Hashtags = () => (
     `}
     render = {data => (
         <Hashtag>
-          <h3>Elige uno de los siguientes temas que te interese.</h3>
-          <h4>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h4>
+          <h1>Elige uno de los siguientes temas que te interese.</h1>
+          <h3>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h3>
           <ul>
               {data.allMarkdownRemark.group.map(tag => (
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>

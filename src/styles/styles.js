@@ -14,6 +14,7 @@ export const PostCard = styled.div`
 	border-radius: 50px;
 	box-shadow: 1px 1px 20px #aaaaaa;
   text-decoration: none;
+  background-color: white;
 	
 	:hover{
 		transform: scale(1.05)
@@ -47,8 +48,8 @@ export const PostCard = styled.div`
 export const Hashtag = styled.div`
     margin: 60px auto 0;
     
-    & h3, h4{
-      font-family: LatoR
+    & h1, h3, h4{
+      font-family: Lato
     }
 
     & ul{
@@ -117,6 +118,58 @@ export const Hashtag = styled.div`
       }
 `
 
+export const SearchBar = styled.div`
+  & form {
+    width: 100%;
+    max-width: 500px;
+    margin: 6rem auto 0;
+        
+    input[type=search] {
+      width: 95%;
+      height: 50px;
+      padding: 0 0 0 10px;
+      position: relative;
+      background-color: whitesmoke;
+      border:solid 3px #fff;
+      box-sizing:border-box;
+      outline: solid white 0;
+      transition: all 0s ease-out 0s;
+      width: 80%;
+      &:focus {
+        width: 100%;
+        z-index:7;
+        border:solid 3px #09f;      
+        outline:solid #56556e 2000px;
+        transition: all 0.3s ease-in 0s;
+      }
+    }
+
+    & ul:nth-child(4n) {
+      background-color: #00B2FF;
+      color: white;
+    }
+  }
+
+  & ul{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 7;
+  }
+
+  & ul a{
+    margin: 0;
+    color: lightblue;
+    font-family: LatoB;
+  }
+  & ul a li{
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid whitesmoke;
+  }
+
+`
 
 
 export const TagsStyle = styled.div`
@@ -159,11 +212,11 @@ export const BlogPost = styled.div`
 
 
 	& a{
-		color: #3498db;
+		color: inherit;
 	  }
 	  
 	& a:hover{
-		color: #2980b9;
+		color: blue;
 	  }
 	  
 	& blockquote {
@@ -178,11 +231,11 @@ export const BlogPost = styled.div`
 	  ol,
 	  li {
 		text-align: left;
-		color: black;
+		color: inherit;
 	  }
 	  
 	& p {
-		color: black;
+		color: inherit;
 		font-size: 1rem;
 		margin-bottom: 1.2rem;
 		text-align: justify;

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
+import ReactDOM from 'react-dom';
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
-import { FaTimes, FaSearch } from "react-icons/fa"
-import './Search.css'
+import { SearchBar } from "../styles/styles"
 
 // Search component
 export default class Search extends Component {
@@ -15,6 +15,26 @@ export default class Search extends Component {
     this.reset = this.reset.bind(this);
   }
 
+
+  componentDidMount() {
+      document.addEventListener('click', this.handleClickOutside, true);
+  }
+
+  componentWillUnmount() {
+      document.removeEventListener('click', this.handleClickOutside, true);
+  }
+
+  handleClickOutside = event => {
+      const domNode = ReactDOM.findDOMNode(this);
+
+      if (!domNode || !domNode.contains(event.target)) {
+          this.setState({
+              query: ``,
+              results: [],
+          });
+      }
+  }
+
   reset(e){
       e.preventDefault();
       this.setState({
@@ -25,21 +45,22 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div id="search">
-            <div id="search-bar">
-                <input type="text" value={this.state.query} onChange={this.search} placeholder="Buscar..." />
-                {this.state.query === `` ? <FaSearch className="fa fa-search"   /> : <FaTimes className="fa fa-times" onClick={e => this.reset(e)}/>}
-            </div> 
-        <ul>
-          {this.state.results.map(page => (
-            // eslint-disable-next-line
-            <li key={page.id} onClick={e => this.reset(e)}>
-              <Link to={page.path + "#topp"}>{page.title}</Link>
-              {": " + page.tags.join(`,`)}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <SearchBar>
+          <form>
+            <input type="search" placeholder="Search..." value={this.state.query} onChange={this.search}/>
+          </form>
+          <ul>
+            {this.state.results.map(page => (
+              // eslint-disable-next-line
+              <Link to={page.path + "#topp"} key={page.id}>
+              <li>
+                {page.title}
+                {": " + page.tags.join(`,`)}
+              </li>
+               </Link>
+            ))}
+          </ul>
+        </SearchBar>
     )
   }
   

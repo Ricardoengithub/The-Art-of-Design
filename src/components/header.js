@@ -2,7 +2,6 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from "prop-types"
 import React from "react"
 
-import Search from "./search"
 import Image from './image'
 import './Header.css'
 
@@ -35,7 +34,6 @@ const Header = ({ siteTitle }) => (
           </div>
         </Link>
 
-        <Search searchIndex={data.siteSearchIndex.index} />
         <Link 
         to="/tags"
         style={{
