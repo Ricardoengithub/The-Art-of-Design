@@ -139,7 +139,7 @@ export const Hashtag = styled.div`
 
 export const SearchBar = styled.div`
   margin: 30vh auto 50vh;
-  max-width: 500px;
+  max-width: 700px;
 
   & form {
     width: 100%;
@@ -199,7 +199,7 @@ export const TagsStyle = styled.div`
   font-weight: 300;
   margin: 0 auto 3rem;
   width: 100%;
-  max-width: 65rem;
+  max-width: 45rem;
 
   & h3 {
     padding: 3rem 0 0;
@@ -230,6 +230,7 @@ export const Post = styled.div`
 export const BlogPost = styled.div`
   width: 100%;
   margin: 0 auto 30px;
+  max-width: 55rem;
   font-family: Helvetica;
 
   & a {

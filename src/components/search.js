@@ -3,6 +3,7 @@ import ReactDOM from "react-dom"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 import { SearchBar } from "../styles/styles"
+import { FaSearch } from "react-icons/fa"
 
 // Search component
 export default class Search extends Component {
