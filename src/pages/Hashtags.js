@@ -22,7 +22,7 @@ const Hashtags = () => (
     `}
     render = {data => (
         <Hashtag>
-          <h1>Elige uno de los siguientes temas que te interese.</h1>
+          <h2>Elige uno de los siguientes temas que te interese.</h2>
           <h3>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h3>
           <ul>
               {data.allMarkdownRemark.group.map(tag => (

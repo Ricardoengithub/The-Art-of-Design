@@ -48,10 +48,6 @@ export const PostCard = styled.div`
 export const Hashtag = styled.div`
     margin: 60px auto 0;
     
-    & h1, h3, h4{
-      font-family: Lato
-    }
-
     & ul{
         width: 70%;
         margin: 0 auto;
@@ -119,35 +115,34 @@ export const Hashtag = styled.div`
 `
 
 export const SearchBar = styled.div`
+  margin: 6rem 0;
+
   & form {
     width: 100%;
     max-width: 500px;
-    margin: 6rem auto 0;
+    margin: 0 auto 0;
     
     input[type=search] {
       -webkit-appearance: none;
       width: 95%;
       height: 50px;
-      padding: 0 0 0 10px;
       position: relative;
-      background-color: whitesmoke;
-      border:solid 3px #fff;
+      background-color: white;
+      border: none;
+      border-bottom: solid 3px grey;
       box-sizing:border-box;
       outline: solid white 0;
       transition: all 0s ease-out 0s;
+      text-align:center;
       width: 80%;
       &:focus {
         width: 100%;
         z-index:7;
+        text-align: center;
         border:solid 3px #09f;      
         outline:solid #56556e 2000px;
         transition: all 0.3s ease-in 0s;
       }
-    }
-
-    & ul:nth-child(4n) {
-      background-color: #00B2FF;
-      color: white;
     }
   }
 

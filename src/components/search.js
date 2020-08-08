@@ -46,8 +46,9 @@ export default class Search extends Component {
   render() {
     return (
       <SearchBar>
+        <h2>Realiza una búsqueda de un objeto o lugar: </h2>
           <form>
-            <input type="search" placeholder="Search..." value={this.state.query} onChange={this.search}/>
+            <input type="search" placeholder="Buscar..." value={this.state.query} onChange={this.search}/>
           </form>
           <ul>
             {this.state.results.map(page => (
