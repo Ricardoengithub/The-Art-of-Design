@@ -148,6 +148,7 @@ export const SearchBar = styled.div`
   }
 
   & ul{
+   list-style-type: none;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
