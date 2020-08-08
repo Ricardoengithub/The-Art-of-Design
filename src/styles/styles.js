@@ -6,9 +6,9 @@ export const Wrapper = styled("div")`
   height: auto;
   min-height: 100vh;
   color: black;
-  background-color: #ffffff;
-  background-image: url(${myImage});
-  background-size: cover;
+  // background-color: #ffffff;
+  // background-image: url(${myImage});
+  // background-size: cover;
   /* background by SVGBackgrounds.com */
 
   & h1,
