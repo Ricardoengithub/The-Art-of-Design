@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
       <Search searchIndex={data.siteSearchIndex.index} />
       <Hashtags />
       <Posts>
+        <h3>También puedes revisar los últimos artículos:</h3>
         {edges.map((edge, index) => {
           const { frontmatter } = edge.node
           return (

@@ -58,7 +58,7 @@ export default class Search extends Component {
   render() {
     return (
       <SearchBar color={this.colors[this.state.contador % 9]}>
-        <h2>Realiza una búsqueda de un objeto o lugar: </h2>
+        <h3>Realiza una búsqueda de un objeto o lugar: </h3>
         <form>
           <input
             type="search"

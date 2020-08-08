@@ -16,11 +16,19 @@ export const Wrapper = styled("div")`
 `
 
 export const Posts = styled.div`
+
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 50rem;
+
+  & h3{
+    margin-bottom: 5vh;
+    width: 100%;
+    display: block;
+  }
 `
 export const PostCard = styled.div`
   margin: 0 auto 30px;
@@ -61,7 +69,7 @@ export const PostCard = styled.div`
 `
 
 export const Hashtag = styled.div`
-  margin: 60px auto 0;
+  margin: 60px auto 15vh;
 
   & ul {
     width: 70%;
@@ -130,7 +138,7 @@ export const Hashtag = styled.div`
 `
 
 export const SearchBar = styled.div`
-  margin: 6rem auto;
+  margin: 30vh auto 50vh;
   max-width: 500px;
 
   & form {
