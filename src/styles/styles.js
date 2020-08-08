@@ -1,15 +1,10 @@
 import styled from "@emotion/styled"
-import myImage from "../images/Pattern-Randomized.svg";
 
 export const Wrapper = styled("div")`
   position: relative;
   height: auto;
   min-height: 100vh;
   color: black;
-  // background-color: #ffffff;
-  // background-image: url(${myImage});
-  // background-size: cover;
-  /* background by SVGBackgrounds.com */
 
   & h1,
   h2,
@@ -21,21 +16,14 @@ export const Wrapper = styled("div")`
 `
 
 export const Posts = styled.div`
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border-radius: 20px;
-
-  & h4{
-    width: 100%;
-    display: block;
-  }
 `
 export const PostCard = styled.div`
-  margin: 10px auto 30px;
+  margin: 0 auto 30px;
   width: 250px;
   text-decoration: none;
   border-radius: 50px;
@@ -44,7 +32,7 @@ export const PostCard = styled.div`
   background-color: white;
 
   :hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 
   & a {
@@ -73,9 +61,7 @@ export const PostCard = styled.div`
 `
 
 export const Hashtag = styled.div`
-  margin: 6rem auto;
-  padding: 10vh;
-  width: 100%;
+  margin: 60px auto 0;
 
   & ul {
     width: 70%;
@@ -144,10 +130,8 @@ export const Hashtag = styled.div`
 `
 
 export const SearchBar = styled.div`
-  margin: 0 auto;
-  width: 90%;
-  max-width: 800px;
-  padding: 30vh 0;
+  margin: 6rem auto;
+  max-width: 500px;
 
   & form {
     width: 100%;
@@ -172,7 +156,8 @@ export const SearchBar = styled.div`
         z-index: 7;
         text-align: center;
         border: solid 3px #09f;
-        transition: all 1s ease-in 0s;
+        outline: solid ${(props) => props.color} 2000px;
+        transition: all 0.3s ease-in 0s;
       }
     }
   }
@@ -188,11 +173,11 @@ export const SearchBar = styled.div`
 
   & ul a {
     margin: 0;
-    color: blue;
+    color: white;
     font-family: LatoB;
   }
   & ul a:hover {
-    color: lightblue;
+    color: whitesmoke;
   }
   & ul a li {
     padding: 10px 0;
@@ -206,7 +191,7 @@ export const TagsStyle = styled.div`
   font-weight: 300;
   margin: 0 auto 3rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: 65rem;
 
   & h3 {
     padding: 3rem 0 0;
@@ -235,7 +220,7 @@ export const Post = styled.div`
 `
 
 export const BlogPost = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 0 auto 30px;
   font-family: Helvetica;
 

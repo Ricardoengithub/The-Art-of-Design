@@ -20,11 +20,10 @@ const IndexPage = ({ data }) => {
       <Search searchIndex={data.siteSearchIndex.index} />
       <Hashtags />
       <Posts>
-      <h4>También puedes revisar los últimos artículos:</h4>
         {edges.map((edge, index) => {
           const { frontmatter } = edge.node
           return (
-          <PostCard>
+            <PostCard>
               <Link to={frontmatter.path + "#topp"} key={index}>
                 <Img
                   fixed={frontmatter.srcPath.childImageSharp.fixed}

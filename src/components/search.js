@@ -12,8 +12,19 @@ export default class Search extends Component {
       query: ``,
       results: [],
       focused: 0,
+      contador: 0,
     }
     this.handleFocus = this.handleFocus.bind(this)
+    this.colors = [
+      "#6B5B95",
+      "#88B04B",
+      "#16a085",
+      "#27ae60",
+      "#2c3e50",
+      "#e74c3c",
+      "#9b59b6",
+      "#FB6964",
+    ]
   }
 
   componentDidMount() {
@@ -40,13 +51,14 @@ export default class Search extends Component {
     e.preventDefault()
     this.setState({
       focused: 1,
+      contador: this.state.contador + 1,
     })
   }
 
   render() {
     return (
-      <SearchBar>
-        <h3>Realiza una búsqueda de un objeto o lugar: </h3>
+      <SearchBar color={this.colors[this.state.contador % 9]}>
+        <h2>Realiza una búsqueda de un objeto o lugar: </h2>
         <form>
           <input
             type="search"

@@ -22,7 +22,7 @@ const Hashtags = () => (
     render={(data) => (
       <Hashtag>
         <h2>Elige uno de los siguientes temas que te interese.</h2>
-        <h5>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h5>
+        <h3>Te ayudaremos a encontrar lecturas interesantes sobre ellos.</h3>
         <ul>
           {data.allMarkdownRemark.group.map((tag) => (
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} key={tag.fieldValue}>
@@ -32,6 +32,8 @@ const Hashtags = () => (
             </Link>
           ))}
         </ul>
+        <h4>También puedes revisar los últimos artículos:</h4>
+        <br />
       </Hashtag>
     )}
   />
