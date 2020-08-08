@@ -4,6 +4,7 @@ import { Index } from "elasticlunr"
 import { Link } from "gatsby"
 import { SearchBar } from "../styles/styles"
 
+
 // Search component
 export default class Search extends Component {
   constructor(props) {
@@ -15,7 +16,6 @@ export default class Search extends Component {
     this.reset = this.reset.bind(this);
   }
 
-
   componentDidMount() {
       document.addEventListener('click', this.handleClickOutside, true);
   }
@@ -23,6 +23,8 @@ export default class Search extends Component {
   componentWillUnmount() {
       document.removeEventListener('click', this.handleClickOutside, true);
   }
+
+
 
   handleClickOutside = event => {
       const domNode = ReactDOM.findDOMNode(this);
@@ -48,9 +50,9 @@ export default class Search extends Component {
       <SearchBar>
         <h2>Realiza una búsqueda de un objeto o lugar: </h2>
           <form>
-            <input type="search" placeholder="Buscar..." value={this.state.query} onChange={this.search}/>
+            <input type="search" placeholder="Buscar..." value={this.state.query} onChange={this.search} id="search"/>
           </form>
-          <ul>
+          <ul id="resultados">
             {this.state.results.map(page => (
               // eslint-disable-next-line
               <Link to={page.path + "#topp"} key={page.id}>

@@ -136,7 +136,7 @@ export const SearchBar = styled.div`
       transition: all 0s ease-out 0s;
       text-align:center;
       width: 80%;
-      &:focus {
+      &:focus{
         width: 100%;
         z-index:7;
         text-align: center;
@@ -147,6 +147,10 @@ export const SearchBar = styled.div`
     }
   }
 
+  #search:focus + #resultados{
+    margin-bottom: 100vh;
+  }
+
   & ul{
    list-style-type: none;
     width: 100%;
@@ -155,10 +159,7 @@ export const SearchBar = styled.div`
     position: relative;
     z-index: 7;
   }
-  & ul a:nth-child(2){
-    margin-bottom: 100vh;
-    background-color: red;
-  }
+
 
   & ul a{
     margin: 0;
