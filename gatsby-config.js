@@ -3,8 +3,8 @@ module.exports = {
     title: `The Art of Design`,
     description: `A design articles site.`,
     author: `@Ricardoentuiter`,
-    keywords: ['Design','Studio'],
-    siteUrl: 'https://www.theartofdesign.studio'
+    keywords: ["Design", "Studio"],
+    siteUrl: "https://www.theartofdesign.studio",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,13 +30,13 @@ module.exports = {
         icon: `src/images/tad-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-transformer-remark',
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`
-      }
+        path: `${__dirname}/src/pages/`,
+      },
     },
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
@@ -47,9 +47,9 @@ module.exports = {
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
           MarkdownRemark: {
-            title: node => node.frontmatter.title,
-            tags: node => node.frontmatter.tags,
-            path: node => node.frontmatter.path,
+            title: (node) => node.frontmatter.title,
+            tags: (node) => node.frontmatter.tags,
+            path: (node) => node.frontmatter.path,
           },
         },
         // Optional filter to limit indexed nodes

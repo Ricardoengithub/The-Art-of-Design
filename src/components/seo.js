@@ -11,7 +11,6 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
-
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,7 +33,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       : null
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
-      
+
   return (
     <Helmet
       htmlAttributes={{
@@ -89,32 +88,35 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(
-        metaImage
-          ? [
-              {
-                property: "og:image",
-                content: image,
-              },
-              {
-                property: "og:image:width",
-                content: metaImage.width,
-              },
-              {
-                property: "og:image:height",
-                content: metaImage.height,
-              },
-              {
-                name: "twitter:card",
-                content: "summary_large_image",
-              },
-            ]
-          : [
-              {
-                name: "twitter:card",
-                content: "summary",
-              },
-            ]).concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: "og:image",
+                  content: image,
+                },
+                {
+                  property: "og:image:width",
+                  content: metaImage.width,
+                },
+                {
+                  property: "og:image:height",
+                  content: metaImage.height,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     />
   )
 }

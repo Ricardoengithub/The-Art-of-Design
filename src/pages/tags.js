@@ -11,7 +11,6 @@ import Layout from "../components/layout"
 
 import { TagsStyle } from "../styles/styles"
 
-
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -23,16 +22,16 @@ const TagsPage = ({
   <Layout>
     <SEO title={"Tags"} />
     <TagsStyle>
-        <h3>Tags</h3>
-        <ul>
-          {group.map(tag => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <h3>Tags</h3>
+      <ul>
+        {group.map((tag) => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </li>
+        ))}
+      </ul>
     </TagsStyle>
   </Layout>
 )

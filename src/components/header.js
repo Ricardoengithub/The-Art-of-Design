@@ -1,10 +1,9 @@
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import Image from './image'
-import './Header.css'
-
+import Image from "./image"
+import "./Header.css"
 
 const Header = ({ siteTitle }) => (
   <StaticQuery
@@ -15,45 +14,41 @@ const Header = ({ siteTitle }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <header>
-    <div
-      id="head"
-    >
+        <div id="head">
+          <Link
+            to="/"
+            style={{
+              color: "inherit",
+              textDecoration: `none`,
+            }}
+          >
+            <div id="head-title-block">
+              <Image />
+              <h4 id="head-title">{siteTitle}</h4>
+            </div>
+          </Link>
 
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: `none`,
-          }}
-        >
-          <div id="head-title-block">
-            <Image />
-            <h4 id="head-title">{siteTitle}</h4>
-          </div>
-        </Link>
-
-        <Link 
-        to="/tags"
-        style={{
-          color: 'rgb(136, 136, 136)',
-          textDecoration: `none`,
-        }}
-        >
-      <h4 id="head-topics" style={{ margin: 0 }}>
-          #Tags
-      </h4>
-        </Link>
-    </div>
+          <Link
+            to="/tags"
+            style={{
+              color: `inherit`,
+              textDecoration: `none`,
+            }}
+          >
+            <h4 id="head-topics" style={{ margin: 0, color: `inherit` }}>
+              #Tags
+            </h4>
+          </Link>
+        </div>
       </header>
     )}
   />
 )
 
-
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {

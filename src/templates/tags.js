@@ -1,14 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 // Components
-import { Link, graphql } from "gatsby";
-import SEO from "../components/seo";
-import Layout from "../components/layout";
+import { Link, graphql } from "gatsby"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
 import { TagsStyle } from "../styles/styles"
 
-
 const Tags = ({ pageContext, data }) => {
-    console.log(data)
+  console.log(data)
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount === 1 ? "Una" : totalCount} publicación${
@@ -33,7 +32,9 @@ const Tags = ({ pageContext, data }) => {
                 This links to a page that does not yet exist.
                 You'll come back to it!
               */}
-        <Link to="/tags"><h4>All tags</h4></Link>
+        <Link to="/tags">
+          <h4>All tags</h4>
+        </Link>
       </TagsStyle>
     </Layout>
   )

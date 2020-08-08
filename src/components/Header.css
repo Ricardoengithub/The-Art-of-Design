@@ -1,6 +1,7 @@
  header{
    position: relative;
    z-index: 8;
+   color: inherit;
  }
  #head {
     display: flex;
@@ -19,10 +20,9 @@
 #head-title, #head-topics{
   font-family: 'Lato';
   font-weight: bold;
-  color: black;
   padding-top: 10px;
 }
-
+/* 
 h1{
   color: #baffc9;
   color: #bae1ff;
@@ -43,4 +43,4 @@ h1{
   color: #BDBB99;
   color: #77B1A9;
   color: #73A857;
-}
+} */

@@ -8,21 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "@emotion/styled"
 
+import { Wrapper } from "../styles/styles"
 import Header from "./header"
 import "./layout.css"
-
-const Wrapper = styled("div")`
-  height: auto;
-  min-height: 100vh;
-  color: black;
-
-  & h1,h2,h3,h4,h5{
-    color: inherit;
-    font-family: LatoR
-  }
-`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
