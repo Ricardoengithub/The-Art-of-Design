@@ -2,7 +2,6 @@
    position: relative;
    z-index: 8;
  }
- 
  #head {
     display: flex;
     flex-direction: row;
@@ -23,9 +22,3 @@
   color: black;
   padding-top: 10px;
 }
-
-@media only screen and (max-width: 600px) {
-  #head-title{
-    display: none;
-  }
-} 

@@ -46,7 +46,7 @@ export const PostCard = styled.div`
 `
 
 export const Hashtag = styled.div`
-    margin: 60px auto 0;
+    margin: -95vh auto 0;
     
     & ul{
         width: 70%;
@@ -153,11 +153,17 @@ export const SearchBar = styled.div`
     position: relative;
     z-index: 7;
   }
+  & ul:last-child{
+    margin-bottom: 100vh;
+  }
 
   & ul a{
     margin: 0;
     color: lightblue;
     font-family: LatoB;
+  }
+  & ul a:hover{
+    color: white;
   }
   & ul a li{
     padding: 10px 0;
