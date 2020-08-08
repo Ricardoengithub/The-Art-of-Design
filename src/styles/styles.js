@@ -16,11 +16,17 @@ export const Wrapper = styled("div")`
 `
 
 export const Posts = styled.div`
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  border-radius: 20px;
+
+  & h4{
+    width: 100%;
+    display: block;
+  }
 `
 export const PostCard = styled.div`
   margin: 0 auto 30px;
@@ -32,7 +38,7 @@ export const PostCard = styled.div`
   background-color: white;
 
   :hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 
   & a {
@@ -61,7 +67,14 @@ export const PostCard = styled.div`
 `
 
 export const Hashtag = styled.div`
-  margin: 60px auto 0;
+  margin: 6rem auto 6rem;
+  padding: 50px 0 0;
+  border-radius: 20px;
+  box-shadow: 1px 1px 20px #aaaaaa;
+
+  :hover {
+    transform: scale(1.03);
+  }
 
   & ul {
     width: 70%;
@@ -131,7 +144,8 @@ export const Hashtag = styled.div`
 
 export const SearchBar = styled.div`
   margin: 6rem auto;
-  max-width: 500px;
+  width: 90%;
+  border-radius: 20px;
 
   & form {
     width: 100%;

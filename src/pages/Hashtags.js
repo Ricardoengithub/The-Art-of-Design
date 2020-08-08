@@ -32,8 +32,6 @@ const Hashtags = () => (
             </Link>
           ))}
         </ul>
-        <h4>También puedes revisar los últimos artículos:</h4>
-        <br />
       </Hashtag>
     )}
   />
