@@ -45,7 +45,7 @@ const BackgroundSection = ({ className, image, url, title}) => (
           Tag="section"
           className={className}
           fluid={imageData}
-          backgroundColor={`#040e18`}
+          backgroundColor={`black`}
         >
             <div className="description">
                 <h1>{title}</h1>

@@ -22,7 +22,7 @@ const LastPosts = ({ className, image, url, title }) => (
                       excerpt
                       srcPath {
                         childImageSharp {
-                            fluid(quality: 100, maxWidth: 1920) {
+                            fluid(quality: 100, maxWidth: 920) {
                               ...GatsbyImageSharpFluid_withWebp
                             }
                         }
@@ -52,6 +52,7 @@ const LastPosts = ({ className, image, url, title }) => (
                         <Img
                           fluid={frontmatter.srcPath.childImageSharp.fluid}
                           alt="A corgi smiling happily"
+                          backgroundColor="black"
                         />
                             <div className="info">
                                 <h1>{frontmatter.title}</h1>

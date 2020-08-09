@@ -171,7 +171,7 @@ export const SearchBar = styled.div`
   & ul a {
     margin: 0;
     color: white;
-    font-family: LatoB;
+    font-family: LatoR;
   }
   & ul a:hover {
     color: whitesmoke;
@@ -281,7 +281,7 @@ export const ButtonNavigation = styled.div`
     text-decoration: none;
     padding: 5px 10px;
     background-color: transparent;
-    font-family: LatoB;
+    font-family: LatoR;
   }
 
   & a:hover {
