@@ -309,3 +309,9 @@ export const FeaturedImage = styled.div`
     border-radius: 30px;
   }
 `
+export const ShareStyle = styled.div`
+
+  & button{
+    margin: -5px 10px;
+  }
+`

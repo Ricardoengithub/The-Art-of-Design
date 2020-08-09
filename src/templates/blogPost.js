@@ -10,12 +10,14 @@ import {
 } from "../styles/styles"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import Share from "./share";
 
 const Template = ({ data, pageContext }) => {
   const title = data.markdownRemark.frontmatter.title
   const date = data.markdownRemark.frontmatter.date
   const html = data.markdownRemark.html
   const { next, prev } = pageContext
+  const myUrl = data.site.siteMetadata.siteUrl + data.markdownRemark.frontmatter.path;
 
   return (
     <Layout>
@@ -23,10 +25,11 @@ const Template = ({ data, pageContext }) => {
         title={title}
         description={data.markdownRemark.frontmatter.excerpt}
         image={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
-        pathname={data.site.siteUrl + data.markdownRemark.frontmatter.path}
+        pathname={myUrl}
       />
       <Post>
-        <h1 id="topp">{title}</h1>
+        <h1>{title}</h1>
+        <Share url={myUrl}/>
         <small>
           <em>{date}</em>
         </small>
