@@ -212,6 +212,7 @@ export const TagsStyle = styled.div`
 
   & ul li a {
     color: #3498db;
+    text-decoration: none;
   }
 `
 export const Post = styled.div`
