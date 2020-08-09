@@ -59,7 +59,7 @@ const BackgroundSection = ({ className, image, url, title}) => (
 
 const StyledBackgroundSection = styled(BackgroundSection)`
     position: relative;
-    height: 45vh;
+    height: 47vh;
     width: 100%;
     background-position: center center;
     background-size: cover;
