@@ -27,10 +27,13 @@ export const Posts = styled.div`
 export const PostCard = styled.div`
   position: relative;
   margin: 0 0 3px;
-  width: 100%;
-  max-width: 900px;
+  width: 49%;
   text-decoration: none;
   background-color: white;
+
+  @media only screen and (max-width: 799px) {
+    width: 100%;
+  }
 
   .info{
     position: absolute;
