@@ -36,8 +36,7 @@ const Template = ({ data, pageContext }) => {
         <FeaturedImage>
           <Img
             fluid={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
-            alt="A corgi smiling happily"
-            className="fimage"
+            alt={data.markdownRemark.frontmatter.excerpt} 
           />
         </FeaturedImage>
         <BlogPost>

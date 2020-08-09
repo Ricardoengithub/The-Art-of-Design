@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -16,7 +15,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="The Art of design" description="A design articles site." />
-      <Helmet title={"Home"} />
       <Search searchIndex={data.siteSearchIndex.index} />
       <Hashtags />
       <Posts>
