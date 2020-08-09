@@ -16,55 +16,41 @@ export const Wrapper = styled("div")`
 `
 
 export const Posts = styled.div`
-
+  position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 30px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 50rem;
-
-  & h3{
-    margin-bottom: 5vh;
-    width: 100%;
-    display: block;
-  }
+  justify-content: space-evenly;
 `
 export const PostCard = styled.div`
-  margin: 0 auto 30px;
-  width: 250px;
-  text-decoration: none;
-  border-radius: 50px;
-  box-shadow: 1px 1px 20px #aaaaaa;
+  position: relative;
+  margin: 0 0 3px;
+  width: 100%;
+  max-width: 900px;
   text-decoration: none;
   background-color: white;
 
-  :hover {
-    transform: scale(1.05);
+  .info{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 20px;
+    height: 100px;
   }
-
-  & a {
-    text-decoration: none;
-    color: black;
-    font-family: "Lato";
+  .info h1,h6,p{
+      margin: 0;
+      text-align: left;
+      vertical-align: middle;
   }
-
-  & img {
-    width: 100%;
-    margin: 0 auto;
-    background-color: transparent;
-    border-radius: 50px 50px 0 0;
-    height: 200px;
-  }
-
-  & h3 {
-    margin: 0 0 5px 0;
-    font-family: Lato;
-  }
-
-  & h4 {
-    font-family: Lato;
-    margin: 0 0;
+  & a:hover {
+    & div img{
+      transform:scale(1.05);
+    }
   }
 `
 

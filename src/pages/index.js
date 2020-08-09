@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql} from "gatsby"
 
-import StyledBackgroundSection from "./background"
-
+import StyledBackgroundSection from "../components/background"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import LastPosts from "./last-posts"
 
 const IndexPage = ({ data }) => {
 
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => {
         <StyledBackgroundSection url="/tags" image={0} title={"#Tags"}/>
         <StyledBackgroundSection url="/everything" image={1} title={"#Everything"}/>
         <StyledBackgroundSection url="/buscar" image={2} title={"#Buscar"} />
+        <LastPosts/>
       </Layout>
   )
 }

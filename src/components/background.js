@@ -63,7 +63,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     width: 100%;
     background-position: center center;
     background-size: cover;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 
     .description{
         position: absolute;
@@ -83,15 +83,15 @@ const StyledBackgroundSection = styled(BackgroundSection)`
         text-align: center;
         position: absolute;
         height: 45vh;
-        top: 40%;
         left: 50%;
+        top: 50%;
+        transform: translate(-50px, -50px);
         vertical-align: middle;
     }
 
     :hover .description{
         background: rgba(0, 0, 0, 0.32);
     }
-
 `
 
 export default StyledBackgroundSection
