@@ -5,7 +5,6 @@ export const Wrapper = styled("div")`
   height: auto;
   min-height: 100vh;
   color: black;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
   & h1,
   h2,
@@ -38,6 +37,7 @@ export const PostCard = styled.div`
     }
   }
 
+
   @media (pointer:coarse) {
     /* Primary Input is a coarse pointer device such as touchscreen or XBox Kinect etc */
   }
@@ -50,7 +50,7 @@ export const PostCard = styled.div`
       }
   
       .info{
-        top: 80%;
+        top: 70%;
       }
     }
   }
@@ -69,7 +69,7 @@ export const PostCard = styled.div`
     transition: all 1.5s linear 0s;
   }
 
-  .info h1,
+  .info h2,
   h5,
   p {
     margin: 0;
@@ -142,6 +142,7 @@ export const TagsStyle = styled.div`
   margin: 0 auto 3rem;
   width: 100%;
   max-width: 45rem;
+  font-s
 
   & h3 {
     padding: 3rem 0 0;

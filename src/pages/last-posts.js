@@ -57,7 +57,7 @@ const LastPosts = () => (
                       backgroundColor="black"
                     />
                     <div className="info" style={{ color: frontmatter.color }}>
-                      <h1>{frontmatter.title}</h1>
+                      <h2>{frontmatter.title}</h2>
                       <h5>
                         <small>{frontmatter.date}</small>
                       </h5>
