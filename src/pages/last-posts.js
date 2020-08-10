@@ -27,6 +27,7 @@ const LastPosts = ({ color }) => (
                             }
                         }
                       }
+                      color
                     }
                   }
                 }
@@ -53,9 +54,9 @@ const LastPosts = ({ color }) => (
                           alt="A corgi smiling happily"
                           backgroundColor="black"
                         />
-                            <div className="info">
+                            <div className="info" style={{color: frontmatter.color}}>
                                 <h1>{frontmatter.title}</h1>
-                                <h6><small>{frontmatter.date}</small></h6>
+                                <h5><small>{frontmatter.date}</small></h5>
                                 <p>{frontmatter.tags.map((tag) => "#" + tag + " ")}</p>
                             </div>
                       </Link>

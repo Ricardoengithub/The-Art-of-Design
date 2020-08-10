@@ -44,10 +44,11 @@ export const PostCard = styled.div`
     padding: 20px;
     height: 100px;
   }
-  .info h1,h6,p{
+  .info h1,h5,p{
       margin: 0;
       text-align: left;
       vertical-align: middle;
+      font-family: LatoR;
   }
   & a:hover {
     & div img{
@@ -307,4 +308,8 @@ export const ShareStyle = styled.div`
   & button{
     margin: -5px 10px;
   }
+`
+
+export const FooterStyle = styled.div`
+  
 `
