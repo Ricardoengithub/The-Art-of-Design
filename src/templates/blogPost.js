@@ -13,31 +13,35 @@ import Layout from "../components/layout"
 import Share from "./share";
 
 const Template = ({ data, pageContext }) => {
-  const title = data.markdownRemark.frontmatter.title
-  const date = data.markdownRemark.frontmatter.date
+  const post = data.markdownRemark.frontmatter
+  const title = post.title
+  const date = post.date
   const html = data.markdownRemark.html
   const { next, prev } = pageContext
-  const myUrl = data.site.siteMetadata.siteUrl + data.markdownRemark.frontmatter.path;
+  const myUrl = data.site.siteMetadata.siteUrl + post.path;
 
   return (
     <Layout>
       <SEO
         title={title}
-        description={data.markdownRemark.frontmatter.excerpt}
-        image={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
+        description={post.excerpt}
+        image={post.srcPath.childImageSharp.fluid}
         pathname={myUrl}
       />
       <Post>
-        <h1>{title}</h1>
+        <h1 id="topp">{title}</h1>
         <Share url={myUrl}/>
         <small>
           <em>{date}</em>
         </small>
         <FeaturedImage>
+          <a href={post.photoRef}>
           <Img
-            fluid={data.markdownRemark.frontmatter.srcPath.childImageSharp.fluid}
-            alt={data.markdownRemark.frontmatter.excerpt} 
+            fluid={post.srcPath.childImageSharp.fluid}
+            alt={post.photoBy} 
+            title={post.photoBy}
           />
+          </a>
         </FeaturedImage>
         <BlogPost>
           <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -84,6 +88,8 @@ export const postQuery = graphql`
             }
           }
         }
+        photoBy
+        photoRef
       }
     }
   }

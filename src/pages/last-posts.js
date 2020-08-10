@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import { Posts, PostCard } from "../styles/styles"
 import SEO from "../components/seo"
 
-const LastPosts = ({ className, image, url, title }) => (
+const LastPosts = ({ color }) => (
     <StaticQuery
       query={graphql`
         query {
