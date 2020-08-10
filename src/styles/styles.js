@@ -14,20 +14,19 @@ export const Wrapper = styled("div")`
     font-family: LatoR;
   }
 `
-
 export const Posts = styled.div`
   position: relative;
   width: 100%;
-  margin: 30px 0;
+  margin: 10px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `
 export const PostCard = styled.div`
   position: relative;
   margin: 0 0 3px;
-  width: 49%;
+  width: 49.7%;
   text-decoration: none;
   background-color: white;
 

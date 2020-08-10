@@ -22,7 +22,7 @@ const LastPosts = ({ className, image, url, title }) => (
                       excerpt
                       srcPath {
                         childImageSharp {
-                            fluid(quality: 100, maxWidth: 920) {
+                            fluid(quality: 100, maxWidth: 950) {
                               ...GatsbyImageSharpFluid_withWebp
                             }
                         }
@@ -34,7 +34,6 @@ const LastPosts = ({ className, image, url, title }) => (
               siteSearchIndex {
                 index
               }
-  
         }
       `}
       render={data => {
