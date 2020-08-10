@@ -38,6 +38,23 @@ export const PostCard = styled.div`
     }
   }
 
+  @media (pointer:coarse) {
+    /* Primary Input is a coarse pointer device such as touchscreen or XBox Kinect etc */
+  }
+
+  @media (pointer:fine) {
+    /* Primary Input is a fine pointer device such as a mouse or stylus */
+    & a:hover {
+      & div img {
+        transform: scale(1.05);
+      }
+  
+      .info{
+        top: 80%;
+      }
+    }
+  }
+
   .info {
     width: auto;
     height: auto;
@@ -59,16 +76,6 @@ export const PostCard = styled.div`
     text-align: left;
     vertical-align: middle;
     font-family: LatoR;
-  }
-
-  & a:hover {
-    & div img {
-      transform: scale(1.05);
-    }
-
-    .info{
-      top: 80%;
-    }
   }
 `
 
