@@ -10,7 +10,7 @@ import {
 } from "../styles/styles"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import Share from "./share";
+import Share from "./share"
 
 const Template = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
@@ -18,7 +18,7 @@ const Template = ({ data, pageContext }) => {
   const date = post.date
   const html = data.markdownRemark.html
   const { next, prev } = pageContext
-  const myUrl = data.site.siteMetadata.siteUrl + post.path;
+  const myUrl = data.site.siteMetadata.siteUrl + post.path
 
   return (
     <Layout>
@@ -30,17 +30,17 @@ const Template = ({ data, pageContext }) => {
       />
       <Post>
         <h1 id="topp">{title}</h1>
-        <Share url={myUrl}/>
+        <Share url={myUrl} />
         <small>
           <em>{date}</em>
         </small>
         <FeaturedImage>
           <a href={post.photoRef}>
-          <Img
-            fluid={post.srcPath.childImageSharp.fluid}
-            alt={post.photoBy} 
-            title={post.photoBy}
-          />
+            <Img
+              fluid={post.srcPath.childImageSharp.fluid}
+              alt={post.photoBy}
+              title={post.photoBy}
+            />
           </a>
         </FeaturedImage>
         <BlogPost>

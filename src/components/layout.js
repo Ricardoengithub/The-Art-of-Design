@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { Wrapper } from "../styles/styles"
 import Header from "./header"
-import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -34,7 +33,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Footer/>
       </div>
     </Wrapper>
   )

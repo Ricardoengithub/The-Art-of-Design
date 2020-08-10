@@ -1,10 +1,10 @@
-import React from 'react'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import styled from 'styled-components'
+import React from "react"
+import { graphql, StaticQuery, Link } from "gatsby"
+import styled from "styled-components"
 
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from "gatsby-background-image"
 
-const BackgroundSection = ({ className, image, url, title}) => (
+const BackgroundSection = ({ className, image, url, title }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -16,41 +16,42 @@ const BackgroundSection = ({ className, image, url, title}) => (
           }
         }
         b2: file(relativePath: { eq: "b2.jpg" }) {
-            childImageSharp {
-              fluid(quality: 100, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
+          }
         }
         b3: file(relativePath: { eq: "b3.jpg" }) {
-            childImageSharp {
-              fluid(quality: 100, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
             }
+          }
         }
-
       }
     `}
-    render={data => {
+    render={(data) => {
       // Set ImageData.
-      const images = [data.b1.childImageSharp.fluid,
-                    data.b2.childImageSharp.fluid,
-                    data.b3.childImageSharp.fluid]
+      const images = [
+        data.b1.childImageSharp.fluid,
+        data.b2.childImageSharp.fluid,
+        data.b3.childImageSharp.fluid,
+      ]
       const imageData = images[image]
 
       return (
         <Link to={url}>
-        <BackgroundImage
-          Tag="section"
-          className={className}
-          fluid={imageData}
-          backgroundColor={`black`}
-        >
+          <BackgroundImage
+            Tag="section"
+            className={className}
+            fluid={imageData}
+            backgroundColor={`black`}
+          >
             <div className="description">
-                <h1>{title}</h1>
+              <h1>{title}</h1>
             </div>
-        </BackgroundImage>
+          </BackgroundImage>
         </Link>
       )
     }}
@@ -58,40 +59,40 @@ const BackgroundSection = ({ className, image, url, title}) => (
 )
 
 const StyledBackgroundSection = styled(BackgroundSection)`
-    position: relative;
-    height: 47vh;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-    margin: 0 0 10px;
+  position: relative;
+  height: 47vh;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 0 10px;
 
-    .description{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        color: #fff;
-        opacity: 1;
-        padding-top: 20px;
-        height: 45vh;
-      
-        /* transition effect. not necessary */
-        transition: opacity .2s, visibility .2s;
-    }
-    .description h1{
-        text-align: center;
-        position: absolute;
-        height: 45vh;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50px, -50px);
-        vertical-align: middle;
-    }
+  .description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    opacity: 1;
+    padding-top: 20px;
+    height: 45vh;
 
-    :hover .description{
-        background: rgba(0, 0, 0, 0.32);
-    }
+    /* transition effect. not necessary */
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .description h1 {
+    text-align: center;
+    position: absolute;
+    height: 45vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50px, -50px);
+    vertical-align: middle;
+  }
+
+  :hover .description {
+    background: rgba(0, 0, 0, 0.32);
+  }
 `
 
 export default StyledBackgroundSection

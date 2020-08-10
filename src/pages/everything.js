@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import { TagsStyle } from "../styles/styles"
 
 const Everything = ({ data }) => {
-  const { edges  } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark
   return (
     <Layout>
       <TagsStyle>
@@ -15,7 +15,10 @@ const Everything = ({ data }) => {
           {edges.map(({ node }) => {
             return (
               <li key={node.frontmatter.title}>
-                <Link to={node.frontmatter.path + "#topp"}>{node.frontmatter.title} - <small style={{color: `black`}}>{node.frontmatter.date}</small></Link>
+                <Link to={node.frontmatter.path + "#topp"}>
+                  {node.frontmatter.title} -{" "}
+                  <small style={{ color: `black` }}>{node.frontmatter.date}</small>
+                </Link>
               </li>
             )
           })}
@@ -33,21 +36,21 @@ const Everything = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query{
+  query {
     allMarkdownRemark(
-        limit: 2000
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        totalCount
-        edges {
-          node {
-            frontmatter {
-              title
-              path
-              date(formatString: "MMMM DD, YYYY")
-            }
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date(formatString: "MMMM DD, YYYY")
           }
         }
+      }
     }
   }
 `

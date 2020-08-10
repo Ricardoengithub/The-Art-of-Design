@@ -22,7 +22,10 @@ const Tags = ({ pageContext, data }) => {
           {edges.map(({ node }) => {
             return (
               <li key={node.frontmatter.title}>
-                <Link to={node.frontmatter.path + "#topp"}>{node.frontmatter.title} - <small style={{color: `black`}}>{node.frontmatter.date}</small></Link>
+                <Link to={node.frontmatter.path + "#topp"}>
+                  {node.frontmatter.title} -{" "}
+                  <small style={{ color: `black` }}>{node.frontmatter.date}</small>
+                </Link>
               </li>
             )
           })}

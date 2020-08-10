@@ -14,10 +14,10 @@ export const Wrapper = styled("div")`
     font-family: LatoR;
   }
 `
-export const Posts = styled.div`
+export const LPosts = styled.div`
   position: relative;
   width: 100%;
-  margin: 10px 0;
+  margin: 0 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -25,16 +25,16 @@ export const Posts = styled.div`
 `
 export const PostCard = styled.div`
   position: relative;
-  margin: 0 0 3px;
-  width: 49.7%;
+  margin: 3px 0 0;
+  flex: 0 1 49.9%;
   text-decoration: none;
   background-color: white;
 
   @media only screen and (max-width: 799px) {
-    width: 100%;
+    flex: 0 1 100%;
   }
 
-  .info{
+  .info {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -44,85 +44,20 @@ export const PostCard = styled.div`
     padding: 20px;
     height: 100px;
   }
-  .info h1,h5,p{
-      margin: 0;
-      text-align: left;
-      vertical-align: middle;
-      font-family: LatoR;
+
+  .info h1,
+  h5,
+  p {
+    margin: 0;
+    text-align: left;
+    vertical-align: middle;
+    font-family: LatoR;
   }
+
   & a:hover {
-    & div img{
-      transform:scale(1.05);
+    & div img {
+      transform: scale(1.05);
     }
-  }
-`
-
-export const Hashtag = styled.div`
-  margin: 60px auto 15vh;
-
-  & ul {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px 0;
-  }
-
-  & ul a {
-    text-decoration: none;
-    border-radius: 20px;
-    margin: 5px;
-  }
-
-  & ul a li {
-    list-style-type: none;
-    font-weight: bold;
-    font-family: "Lato";
-    color: white;
-    top: 5px;
-    font-size: 1rem;
-    padding: 0 10px;
-    position: relative;
-  }
-
-  & ul a:nth-child(4n) {
-    background-color: #00b2ff;
-    color: white;
-  }
-  & ul a:nth-child(4n + 1) {
-    background-color: #ebbc00;
-    color: white;
-  }
-  & ul a:nth-child(4n + 2) {
-    background-color: #7600ad;
-    color: white;
-  }
-  & ul a:nth-child(4n + 3) {
-    background-color: #7ed957;
-    color: white;
-  }
-
-  & ul a:hover {
-    transform: scale(1.1);
-  }
-
-  & ul a:hover:nth-child(4n) {
-    background-color: #0096d6;
-    color: white;
-  }
-  & ul a:hover:nth-child(4n + 1) {
-    background-color: #ffcc00;
-    color: white;
-  }
-  & ul a:hover:nth-child(4n + 2) {
-    background-color: #660095;
-    color: white;
-  }
-  & ul a:hover:nth-child(4n + 3) {
-    background-color: #4ece17;
-    color: white;
   }
 `
 
@@ -304,12 +239,9 @@ export const FeaturedImage = styled.div`
   }
 `
 export const ShareStyle = styled.div`
-
-  & button{
+  & button {
     margin: -5px 10px;
   }
 `
 
-export const FooterStyle = styled.div`
-  
-`
+export const FooterStyle = styled.div``
