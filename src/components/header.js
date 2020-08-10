@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
               <h4 id="head-title">{siteTitle}</h4>
             </div>
           </Link>
-
+            <nav>
           <Link
             to="/tags"
             style={{
@@ -37,10 +37,20 @@ const Header = ({ siteTitle }) => (
               textDecoration: `none`,
             }}
           >
-            <h4 id="head-topics" style={{ margin: 0, color: `inherit` }}>
               #Tags
-            </h4>
           </Link>
+
+          <Link
+            to="/contact"
+            style={{
+              color: `inherit`,
+              textDecoration: `none`,
+            }}
+          >
+              #Contacto
+          </Link>
+            </nav>
+
         </div>
       </header>
     )}

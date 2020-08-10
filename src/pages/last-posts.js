@@ -22,7 +22,7 @@ const LastPosts = ({ color }) => (
                       excerpt
                       srcPath {
                         childImageSharp {
-                            fluid(quality: 100, maxWidth: 950) {
+                            fluid(quality: 100, maxWidth: 950, maxHeight: 600) {
                               ...GatsbyImageSharpFluid_withWebp
                             }
                         }

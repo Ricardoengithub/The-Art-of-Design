@@ -17,10 +17,21 @@
   display: flex;
   flex-direction: row;
 }
-#head-title, #head-topics{
-  font-family: 'Lato';
+#head-title{
+  font-family: Lato;
   font-weight: bold;
   padding-top: 10px;
+}
+nav{
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-top: 5px;
+}
+nav > a {
+  font-family: LatoR;
+  margin: 0 15px 0;
 }
 /* 
 h1{
