@@ -5,6 +5,7 @@ export const Wrapper = styled("div")`
   height: auto;
   min-height: 100vh;
   color: black;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
   & h1,
   h2,
@@ -32,17 +33,23 @@ export const PostCard = styled.div`
 
   @media only screen and (max-width: 799px) {
     flex: 0 1 100%;
+    & p,h1,h5{
+      font-size: .8rem;
+    }
   }
 
   .info {
+    width: auto;
+    height: auto;
+    background-color: rgba(0,0,0,.5);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     color: white;
-    padding: 20px;
-    height: 100px;
+    padding: 5px;
+    transition: all 1.5s linear 0s;
   }
 
   .info h1,
@@ -57,6 +64,10 @@ export const PostCard = styled.div`
   & a:hover {
     & div img {
       transform: scale(1.05);
+    }
+
+    .info{
+      top: 80%;
     }
   }
 `

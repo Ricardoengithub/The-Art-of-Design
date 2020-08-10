@@ -65,7 +65,8 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   background-position: center center;
   background-size: cover;
   margin: 0 0 10px;
-
+  
+  
   .description {
     position: absolute;
     top: 0;
@@ -76,9 +77,11 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     opacity: 1;
     padding-top: 20px;
     height: 45vh;
-
+    opacity: 0;
+    visibility: hidden;
+    
     /* transition effect. not necessary */
-    transition: opacity 0.2s, visibility 0.2s;
+    transition: all .3s linear 0s;
   }
   .description h1 {
     text-align: center;
@@ -91,7 +94,25 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   }
 
   :hover .description {
+    opacity: 1;
+    visibility: visible;
     background: rgba(0, 0, 0, 0.32);
+    animation: slidein 1.5s;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
   }
 `
 
