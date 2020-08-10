@@ -50,7 +50,7 @@ export const PostCard = styled.div`
       }
   
       .info{
-        top: 70%;
+        top: 75%;
       }
     }
   }
@@ -142,7 +142,6 @@ export const TagsStyle = styled.div`
   margin: 0 auto 3rem;
   width: 100%;
   max-width: 45rem;
-  font-s
 
   & h3 {
     padding: 3rem 0 0;
