@@ -267,9 +267,13 @@ export const BlogPost = styled.div`
 `
 
 export const Navigation = styled.div`
-  width: 80%;
-  margin: 0 10%;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 50rem;
+  margin: 30px auto;
+  justify-content: space-evenly;
 `
 export const ButtonNavigation = styled.div`
   & a {
