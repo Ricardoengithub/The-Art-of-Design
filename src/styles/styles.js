@@ -26,8 +26,8 @@ export const LPosts = styled.div`
 `
 export const PostCard = styled.div`
   position: relative;
-  margin: 3px 0 0;
-  flex: 0 1 49.9%;
+  margin: 1px 0;
+  flex: 0 1 33.3%;
   text-decoration: none;
   background-color: white;
 
