@@ -11,7 +11,8 @@ export const Wrapper = styled("div")`
   h3,
   h4,
   h5 {
-    font-family: LatoR;
+    font-family: Helvetica;
+    font-weight: 100;
   }
 `
 export const LPosts = styled.div`
@@ -76,7 +77,7 @@ export const PostCard = styled.div`
     margin: 0;
     text-align: left;
     vertical-align: middle;
-    font-family: LatoR;
+    font-family: Helvetica;
   }
 `
 
@@ -125,7 +126,7 @@ export const SearchBar = styled.div`
   & ul a {
     margin: 0;
     color: white;
-    font-family: LatoR;
+    font-family: Helvetica;
   }
   & ul a:hover {
     color: whitesmoke;
@@ -146,7 +147,7 @@ export const TagsStyle = styled.div`
 
   & h3 {
     padding: 3rem 0 0;
-    font-family: Lato;
+    font-family: Helvetica;
   }
 
   & ul {
@@ -167,7 +168,7 @@ export const Post = styled.div`
 
   & h1 {
     padding: 3rem 0 0;
-    font-family: LatoR;
+    font-family: Helvetica;
   }
 `
 
@@ -212,13 +213,6 @@ export const BlogPost = styled.div`
     min-width: 275px;
     background-color: white;
   }
-
-  & h2,
-  h3,
-  h4,
-  h5 {
-    font-family: Lato;
-  }
 `
 
 export const Navigation = styled.div`
@@ -239,7 +233,7 @@ export const ButtonNavigation = styled.div`
     text-decoration: none;
     padding: 5px 10px;
     background-color: transparent;
-    font-family: LatoR;
+    font-family: Helvetica;
   }
 
   & a:hover {
