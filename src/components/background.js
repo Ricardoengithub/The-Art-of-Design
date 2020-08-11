@@ -66,8 +66,6 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   background-size: cover;
   margin: 0 0 10px;
   
-  @media (pointer:coarse) {
-    /* Primary Input is a coarse pointer device such as touchscreen or XBox Kinect etc */
     .description {
       position: absolute;
       top: 0;
@@ -91,64 +89,9 @@ const StyledBackgroundSection = styled(BackgroundSection)`
       transform: translate(-50px, -50px);
       vertical-align: middle;
     }
-  
+
     :hover .description {
       background: rgba(0, 0, 0, 0.32);
-      animation: slidein 1.5s;
-      transform: translate3d(0, 0, 0);
-      backface-visibility: hidden;
-    }
-  }
-
-  @media (pointer:fine) {
-    .description {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      color: #fff;
-      opacity: 1;
-      padding-top: 20px;
-      height: 45vh;
-      opacity: 0;
-      visibility: hidden;
-      
-      /* transition effect. not necessary */
-      transition: all .3s linear 0s;
-    }
-    .description h1 {
-      text-align: center;
-      position: absolute;
-      height: 45vh;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50px, -50px);
-      vertical-align: middle;
-    }
-  
-    :hover .description {
-      opacity: 1;
-      visibility: visible;
-      background: rgba(0, 0, 0, 0.32);
-      animation: slidein 1.5s;
-      transform: translate3d(0, 0, 0);
-      backface-visibility: hidden;
-    }
-
-  }
-
-
-
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%; 
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
     }
   }
 `
