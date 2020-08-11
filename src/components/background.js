@@ -10,21 +10,21 @@ const BackgroundSection = ({ className, image, url, title }) => (
       query {
         b1: file(relativePath: { eq: "b1.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1920) {
+            fluid(quality: 100, maxWidth: 1440) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         b2: file(relativePath: { eq: "b2.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1920) {
+            fluid(quality: 100, maxWidth: 1440) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         b3: file(relativePath: { eq: "b3.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1920) {
+            fluid(quality: 100, maxWidth: 1440) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
