@@ -32,6 +32,7 @@ export const PostCard = styled.div`
 
   @media only screen and (max-width: 799px) {
     flex: 0 1 100%;
+    
     & p,h1,h5{
       font-size: .8rem;
     }

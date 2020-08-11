@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
       <SEO title="The Art of design" description="A design articles site." />
       <StyledBackgroundSection url="/tags" image={0} title={"#Tags"} />
       <StyledBackgroundSection url="/everything" image={1} title={"#Everything"} />
-      <StyledBackgroundSection url="/buscar" image={2} title={"#Buscar"} />
+      <StyledBackgroundSection url="/search" image={2} title={"#Buscar"} />
       <LastPosts />
     </Layout>
   )

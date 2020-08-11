@@ -1,8 +1,7 @@
 import React, { Component } from "react"
-import ReactDOM from "react-dom"
 import { Index } from "elasticlunr"
 import { Link } from "gatsby"
-import { SearchBar } from "../styles/styles"
+import { TagsStyle } from "../styles/styles"
 
 // Search component
 export default class Search extends Component {
@@ -11,75 +10,41 @@ export default class Search extends Component {
     this.state = {
       query: ``,
       results: [],
-      focused: 0,
-      contador: 0,
     }
-    this.handleFocus = this.handleFocus.bind(this)
-    this.colors = [
-      "#6B5B95",
-      "#88B04B",
-      "#16a085",
-      "#27ae60",
-      "#2c3e50",
-      "#e74c3c",
-      "#9b59b6",
-      "#FB6964",
-    ]
-  }
-
-  componentDidMount() {
-    document.addEventListener("click", this.handleClickOutside, true)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("click", this.handleClickOutside, true)
-  }
-
-  handleClickOutside = (event) => {
-    const domNode = ReactDOM.findDOMNode(this)
-
-    if (!domNode || !domNode.contains(event.target)) {
-      this.setState({
-        query: ``,
-        results: [],
-        focused: 0,
-      })
-    }
-  }
-
-  handleFocus(e) {
-    e.preventDefault()
-    this.setState({
-      focused: 1,
-      contador: this.state.contador + 1,
-    })
   }
 
   render() {
     return (
-      <SearchBar color={this.colors[this.state.contador % 9]}>
+      <TagsStyle>
         <h3>Realiza una búsqueda de un objeto o lugar: </h3>
         <form>
           <input
             type="search"
-            placeholder="Buscar..."
+            placeholder="Ejemplo: Lápiz"
             value={this.state.query}
             onChange={this.search}
-            onFocus={(e) => this.handleFocus(e)}
           />
         </form>
-        <ul style={this.state.focused === 0 ? {} : { marginBottom: `100vh` }}>
+        <ul>
           {this.state.results.map((page) => (
             // eslint-disable-next-line
-            <Link to={page.path + "#topp"} key={page.id}>
-              <li>
-                {page.title}
-                {": " + page.tags.join(`,`)}
-              </li>
-            </Link>
+            // <Link to={page.path + "#topp"} key={page.id}>
+            //   <li>
+            //     {page.title}
+            //     {": " + page.tags.join(`,`)}
+            //   </li>
+            // </Link>
+
+            <li key={page.title}>
+              <Link to={page.path + "#topp"}>
+                {page.title}{" "}
+                <small style={{ color: `black` }}>{": #" + page.tags.join(`,`)} - {page.date}</small>
+                
+              </Link>
+            </li>
           ))}
         </ul>
-      </SearchBar>
+      </TagsStyle>
     )
   }
 
