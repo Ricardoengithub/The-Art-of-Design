@@ -10,21 +10,21 @@ const BackgroundSection = ({ className, image, url, title }) => (
       query {
         b1: file(relativePath: { eq: "b1.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1440) {
+            fluid(quality: 100, maxWidth: 1440, maxHeight: 500) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         b2: file(relativePath: { eq: "b2.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1440) {
+            fluid(quality: 100, maxWidth: 1440, maxHeight: 500) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         b3: file(relativePath: { eq: "b3.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1440) {
+            fluid(quality: 100, maxWidth: 1440, maxHeight: 500) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -60,7 +60,7 @@ const BackgroundSection = ({ className, image, url, title }) => (
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   position: relative;
-  height: 47vh;
+  height: 32vh;
   width: 100%;
   background-position: center center;
   background-size: cover;
@@ -75,7 +75,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
       color: #fff;
       opacity: 1;
       padding-top: 20px;
-      height: 45vh;
+      height: 32vh;
       
       /* transition effect. not necessary */
       transition: all .3s linear 0s;

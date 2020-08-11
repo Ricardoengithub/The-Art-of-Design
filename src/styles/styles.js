@@ -68,7 +68,7 @@ export const PostCard = styled.div`
     right: 0;
     color: white;
     padding: 5px;
-    transition: all 1.5s linear 0s;
+    transition: all 1s linear 0s;
   }
 
   .info h2,
