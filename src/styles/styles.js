@@ -27,7 +27,7 @@ export const LPosts = styled.div`
 export const PostCard = styled.div`
   position: relative;
   margin: 1px 0;
-  flex: 0 1 33.3%;
+  flex: 0 1 25%;
   text-decoration: none;
   background-color: white;
 
@@ -52,7 +52,7 @@ export const PostCard = styled.div`
       }
   
       .info{
-        top: 75%;
+        top: 70%;
       }
     }
   }

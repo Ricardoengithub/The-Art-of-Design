@@ -11,7 +11,7 @@ const LastPosts = () => (
       query {
         allMarkdownRemark(
           sort: { order: DESC, fields: frontmatter___date }
-          limit: 3
+          limit: 4
         ) {
           totalCount
           edges {
@@ -25,7 +25,7 @@ const LastPosts = () => (
                 excerpt
                 srcPath {
                   childImageSharp {
-                    fluid(quality: 100, maxWidth: 512, maxHeight: 350) {
+                    fluid(quality: 100, maxWidth: 360, maxHeight: 240) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
