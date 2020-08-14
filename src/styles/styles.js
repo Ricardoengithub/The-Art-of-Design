@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   height: auto;
   min-height: 100vh;
   color: black;
-  font-size: 15px;
   background-color: white;
 
   & h1,
@@ -37,7 +36,7 @@ export const LPosts = styled.div`
   }
 `
 export const PostCard = styled.div`
-  flex: 0 1 20%;
+  flex: 0 1 30%;
   margin: 30px auto;
   min-width: 300px;
   :hover{

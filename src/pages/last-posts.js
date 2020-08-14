@@ -60,8 +60,8 @@ const LastPosts = () => (
                     className="imagen"
                     />
                     <small>{frontmatter.date}</small><br/>
-                    <h4 style={{margin: 0, fontFamily: `cursiz`}}><small>{frontmatter.excerpt}</small></h4>
-                    <em><small>{frontmatter.keywords.map((keyw) => "#" + keyw + " ")}</small></em>
+                    <h4 style={{margin: 10, fontFamily: `cursiz`}}>{frontmatter.excerpt}</h4>
+                    <em>{frontmatter.keywords.map((keyw) => "#" + keyw + " ")}</em>
                   </Link>
                 </PostCard>
               )
