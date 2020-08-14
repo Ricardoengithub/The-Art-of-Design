@@ -23,6 +23,9 @@ const LastPosts = () => (
                 path
                 tags
                 excerpt
+                color
+                author
+                keywords
                 srcPath {
                   childImageSharp {
                     fluid(quality: 100, maxWidth: 360, maxHeight: 240) {
@@ -30,7 +33,6 @@ const LastPosts = () => (
                     }
                   }
                 }
-                color
               }
             }
           }
@@ -43,32 +45,28 @@ const LastPosts = () => (
     render={(data) => {
       const { edges } = data.allMarkdownRemark
       return (
-        <div>
+        <LPosts>
           <SEO title="The Art of design" description="A design articles site." />
-          <LPosts>
             {edges.map((edge, index) => {
               const { frontmatter } = edge.node
               return (
                 <PostCard>
                   <Link to={frontmatter.path + "#topp"} key={index}>
-                    <Img
-                      fluid={frontmatter.srcPath.childImageSharp.fluid}
-                      alt="A corgi smiling happily"
-                      backgroundColor="black"
+                  <h2 style={{margin: 10}}><em>{frontmatter.title}</em></h2>
+                  <Img
+                    fluid={frontmatter.srcPath.childImageSharp.fluid}
+                    alt="A corgi smiling happily"
+                    backgroundColor="black"
+                    className="imagen"
                     />
-                    <div className="info" style={{ color: frontmatter.color }}>
-                      <h2>{frontmatter.title}</h2>
-                      <h5>
-                        <small>{frontmatter.date}</small>
-                      </h5>
-                      <p>{frontmatter.tags.map((tag) => "#" + tag + " ")}</p>
-                    </div>
+                    <small>{frontmatter.date}</small><br/>
+                    <h4 style={{margin: 0, fontFamily: `cursiz`}}><small>{frontmatter.excerpt}</small></h4>
+                    <em><small>{frontmatter.keywords.map((keyw) => "#" + keyw + " ")}</small></em>
                   </Link>
                 </PostCard>
               )
             })}
-          </LPosts>
-        </div>
+        </LPosts>
       )
     }}
   />

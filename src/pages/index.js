@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import StyledBackgroundSection from "../components/background"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { HomePageStyle } from "../styles/styles"
 
 import LastPosts from "./last-posts"
 
@@ -11,10 +11,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="The Art of design" description="A design articles site." />
-      <StyledBackgroundSection url="/tags" image={0} title={"#Tags"} />
-      <StyledBackgroundSection url="/everything" image={1} title={"#Everything"} />
-      <StyledBackgroundSection url="/search" image={2} title={"#Buscar"} />
-      <LastPosts />
+      <HomePageStyle>
+        <LastPosts />
+      </HomePageStyle>
     </Layout>
   )
 }

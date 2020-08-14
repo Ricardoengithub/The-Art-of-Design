@@ -1,10 +1,12 @@
 import styled from "@emotion/styled"
 
-export const Wrapper = styled("div")`
+export const Wrapper = styled.div`
   position: relative;
   height: auto;
   min-height: 100vh;
   color: black;
+  font-size: 15px;
+  background-color: white;
 
   & h1,
   h2,
@@ -15,69 +17,57 @@ export const Wrapper = styled("div")`
     font-weight: 100;
   }
 `
-export const LPosts = styled.div`
-  position: relative;
-  width: 100%;
-  margin: 0 0;
+
+export const HomePageStyle = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap; 
+  width: 90%;
+  margin: 0 auto;
   justify-content: space-between;
+  margin-top: 5vh;
+
+`
+export const LPosts = styled.div`
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  & a {
+    text-decoration: none;
+  }
 `
 export const PostCard = styled.div`
-  position: relative;
-  margin: 1px 0;
-  flex: 0 1 25%;
-  text-decoration: none;
-  background-color: white;
-
-  @media only screen and (max-width: 799px) {
-    flex: 0 1 100%;
-    
-    & p,h1,h5{
-      font-size: .8rem;
-    }
+  flex: 0 1 20%;
+  margin: 30px auto;
+  min-width: 300px;
+  :hover{
+    animation: shake 1s;
   }
-
-
-  @media (pointer:coarse) {
-    /* Primary Input is a coarse pointer device such as touchscreen or XBox Kinect etc */
-  }
-
-  @media (pointer:fine) {
-    /* Primary Input is a fine pointer device such as a mouse or stylus */
-    & a:hover {
-      & div img {
-        transform: scale(1.05);
-      }
   
-      .info{
-        top: 70%;
-      }
-    }
+  & a {
+    color: black;
   }
 
-  .info {
-    width: auto;
-    height: auto;
-    background-color: rgba(0,0,0,.5);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    padding: 5px;
-    transition: all 1s linear 0s;
+  .imagen{
+    flex: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 20px;
   }
 
-  .info h2,
-  h5,
-  p {
-    margin: 0;
-    text-align: left;
-    vertical-align: middle;
-    font-family: Helvetica;
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 `
 
