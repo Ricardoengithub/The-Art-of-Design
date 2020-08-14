@@ -28,7 +28,7 @@ const LastPosts = () => (
                 keywords
                 srcPath {
                   childImageSharp {
-                    fluid(quality: 100, maxWidth: 360, maxHeight: 240) {
+                    fluid(quality: 100, maxWidth: 300, maxHeight: 220) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
