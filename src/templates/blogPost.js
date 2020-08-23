@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
 import {
   Post,
-  FeaturedImage,
   BlogPost,
   Navigation,
   ButtonNavigation,
@@ -25,7 +23,7 @@ const Template = ({ data, pageContext }) => {
       <SEO
         title={title}
         description={post.excerpt}
-        image={post.srcPath.childImageSharp.fluid}
+        image={post.srcPath}
         pathname={myUrl}
       />
       <Post>
@@ -34,15 +32,6 @@ const Template = ({ data, pageContext }) => {
         <small>
           <em>{date}</em>
         </small>
-        <FeaturedImage>
-          <a href={post.photoRef}>
-            <Img
-              fluid={post.srcPath.childImageSharp.fluid}
-              alt={post.photoBy}
-              title={post.photoBy}
-            />
-          </a>
-        </FeaturedImage>
         <BlogPost>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </BlogPost>
@@ -78,18 +67,11 @@ export const postQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM, DD, YYYY")
+        author
         path
         tags
         excerpt
-        srcPath {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        photoBy
-        photoRef
+        srcPath
       }
     }
   }

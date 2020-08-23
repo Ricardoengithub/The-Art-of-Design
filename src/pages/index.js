@@ -9,24 +9,24 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <Layout>
-    <TagsStyle>
-      <SEO title={"Everything"} />
-      <h3>Estos son todos los posts:</h3>
-      <ul>
-        {edges.map(({ node }) => {
-          return (
-            <li key={node.frontmatter.title}>
-              <Link to={node.frontmatter.path + "#topp"}>
-                {node.frontmatter.title} -{" "}
-                <small style={{ color: `black` }}>{node.frontmatter.date}</small>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </TagsStyle>
-    <Search searchIndex={data.siteSearchIndex.index} />
-  </Layout>
+      <TagsStyle>
+        <SEO title={"Everything"} />
+        <h3>Estos son todos los posts:</h3>
+        <ul>
+          {edges.map(({ node }) => {
+            return (
+              <li key={node.frontmatter.title}>
+                <Link to={node.frontmatter.path + "#topp"}>
+                  {node.frontmatter.title} -{" "}
+                  <small style={{ color: `black` }}>{node.frontmatter.date}</small>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </TagsStyle>
+      <Search searchIndex={data.siteSearchIndex.index} />
+    </Layout>
   )
 }
 
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
     }
     siteSearchIndex {
       index
-  }
+    }
   }
 `
 

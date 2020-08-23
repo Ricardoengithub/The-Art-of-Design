@@ -38,8 +38,9 @@ export default class Search extends Component {
             <li key={page.title}>
               <Link to={page.path + "#topp"}>
                 {page.title}{" "}
-                <small style={{ color: `black` }}>{": #" + page.tags.join(`,`)} - {page.date}</small>
-                
+                <small style={{ color: `black` }}>
+                  {": #" + page.tags.join(`,`)} - {page.date}
+                </small>
               </Link>
             </li>
           ))}

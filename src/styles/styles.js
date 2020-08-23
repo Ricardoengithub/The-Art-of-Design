@@ -19,56 +19,13 @@ export const Wrapper = styled.div`
 
 export const HomePageStyle = styled.div`
   display: flex;
-  flex-flow: row wrap; 
+  flex-flow: row wrap;
   width: 90%;
   margin: 0 auto;
   justify-content: space-between;
   margin-top: 5vh;
-
 `
-export const LPosts = styled.div`
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
 
-  & a {
-    text-decoration: none;
-  }
-`
-export const PostCard = styled.div`
-  flex: 0 1 30%;
-  margin: 30px auto;
-  min-width: 300px;
-  :hover{
-    animation: shake 1s;
-  }
-  
-  & a {
-    color: black;
-  }
-
-  .imagen{
-    flex: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
-
-
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-`
 
 export const SearchBar = styled.div`
   margin: 30vh auto 50vh;
@@ -198,8 +155,12 @@ export const BlogPost = styled.div`
   }
 
   & img {
+    display: block;
     border-radius: 30px;
     min-width: 275px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 600px;
     background-color: white;
   }
 `
