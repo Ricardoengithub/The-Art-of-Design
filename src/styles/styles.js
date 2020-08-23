@@ -26,7 +26,6 @@ export const HomePageStyle = styled.div`
   margin-top: 5vh;
 `
 
-
 export const SearchBar = styled.div`
   margin: 30vh auto 50vh;
   max-width: 700px;
@@ -101,8 +100,12 @@ export const TagsStyle = styled.div`
   }
 
   & ul li a {
-    color: #3498db;
+    color: #0000C1;
     text-decoration: none;
+  }
+
+  & ul li a:hover{
+    color: #07F;
   }
 `
 export const Post = styled.div`

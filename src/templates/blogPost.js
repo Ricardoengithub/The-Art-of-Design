@@ -1,11 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import {
-  Post,
-  BlogPost,
-  Navigation,
-  ButtonNavigation,
-} from "../styles/styles"
+import { Post, BlogPost, Navigation, ButtonNavigation } from "../styles/styles"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Share from "./share"

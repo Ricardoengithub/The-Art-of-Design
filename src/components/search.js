@@ -18,7 +18,10 @@ export default class Search extends Component {
       <TagsStyle>
         <h3>Realiza una búsqueda de un objeto o lugar: </h3>
         <form>
+          <label htmlFor="buscar">Buscar:</label><br/>
           <input
+            id="buscar"
+            name="buscar"
             type="search"
             placeholder="Ejemplo: Lápiz"
             value={this.state.query}
