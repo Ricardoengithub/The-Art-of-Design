@@ -1,6 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Post, BlogPost, Navigation, ButtonNavigation } from "../styles/styles"
+import Img from "gatsby-image"
+import {
+  Post,
+  FeaturedImage,
+  BlogPost,
+  Navigation,
+  ButtonNavigation,
+} from "../styles/styles"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Share from "./share"
@@ -18,7 +25,7 @@ const Template = ({ data, pageContext }) => {
       <SEO
         title={title}
         description={post.excerpt}
-        image={post.srcPath}
+        image={data.markdownRemark.featuredImg.childImageSharp.fluid}
         pathname={myUrl}
       />
       <Post>
@@ -27,6 +34,15 @@ const Template = ({ data, pageContext }) => {
         <small>
           <em>{date}</em>
         </small>
+        <FeaturedImage>
+          <a href={post.photoRef}>
+            <Img
+              fluid={data.markdownRemark.featuredImg.childImageSharp.fluid}
+              alt={post.photoBy}
+              title={post.photoBy}
+            />
+          </a>
+        </FeaturedImage>
         <BlogPost>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </BlogPost>
@@ -66,7 +82,13 @@ export const postQuery = graphql`
         path
         tags
         excerpt
-        srcPath
+      }
+      featuredImg {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   }

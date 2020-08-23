@@ -16,9 +16,10 @@ export default class Search extends Component {
   render() {
     return (
       <TagsStyle>
-        <h3>Realiza una búsqueda de un objeto o lugar: </h3>
+        <h4>Realiza una búsqueda de un objeto o lugar: </h4>
         <form>
-          <label htmlFor="buscar">Buscar:</label><br/>
+          <label htmlFor="buscar">Buscar:</label>
+          <br />
           <input
             id="buscar"
             name="buscar"

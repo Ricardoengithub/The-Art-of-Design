@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
           >
             <div id="head-title-block">
               <Image />
-              <h4 id="head-title">{siteTitle}</h4>
+              <h5 id="head-title">{siteTitle}</h5>
             </div>
           </Link>
           <div id="nav">
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
                 textDecoration: `none`,
               }}
             >
-              <h4>#Tags</h4>
+              <h5>#Tags</h5>
             </Link>
 
             <Link
@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => (
                 textDecoration: `none`,
               }}
             >
-              <h4>#Contacto</h4>
+              <h5>#Contacto</h5>
             </Link>
           </div>
         </div>

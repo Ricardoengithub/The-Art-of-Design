@@ -100,12 +100,12 @@ export const TagsStyle = styled.div`
   }
 
   & ul li a {
-    color: #0000C1;
+    color: #0000c1;
     text-decoration: none;
   }
 
-  & ul li a:hover{
-    color: #07F;
+  & ul li a:hover {
+    color: #07f;
   }
 `
 export const Post = styled.div`
