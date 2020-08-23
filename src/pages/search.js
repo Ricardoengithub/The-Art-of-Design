@@ -14,22 +14,6 @@ const SearchPage = ({data}) => (
 
 export const query = graphql`
     query SearchPageQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }, limit: 4) {
-            totalCount
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "MMMM DD, YYYY")
-                        path
-                        tags
-                        author
-                        keywords
-                    }
-                }
-            }
-        }
         siteSearchIndex {
             index
         }

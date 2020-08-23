@@ -131,7 +131,7 @@ export const TagsStyle = styled.div`
   font-family: Helvetica, sans-serif;
   font-weight: 300;
   margin: 0 auto 3rem;
-  width: 100%;
+  width: 90%;
   max-width: 45rem;
 
   & h3 {
